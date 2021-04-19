@@ -19,6 +19,15 @@
   max-width: 1200px;
 } 
 
+/* フラッシュの色 */
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}  
+
 /*
  *= require_tree .
  *= require_self
