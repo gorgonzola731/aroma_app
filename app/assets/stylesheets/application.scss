@@ -1,7 +1,15 @@
 /* 全体 */
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #FFFAF0;
+}
 
 main {
-  margin-top: 50px;
+  padding-top: 50px;
+  background-color: #FFFAF0;
 }
 
 .base-container {
