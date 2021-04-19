@@ -14,6 +14,7 @@
     <header>
     </header>
     <main>
+      <%= render 'layouts/flash' %>
       <%# max_width メソッドはapplication_helper.rbに記載 %>
       <div class="base-container <%= max_width %>">
       <% if user_signed_in? %>
