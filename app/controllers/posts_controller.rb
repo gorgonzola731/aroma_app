@@ -2,7 +2,8 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: :index
 
   def index
-    @posts = Post.all.order(created_at: :desc) 
+    aroma_rails = ["フローラル", "ハーバル", "ウッディ", "シトラス", "和風", "スパイシー", "エキゾチック", "その他"]
+    @posts = Post.where(aroma: aroma_rails).order(created_at: :desc) 
   end
 
   def show
