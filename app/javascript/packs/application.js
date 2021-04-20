@@ -8,7 +8,7 @@ $(document).on('turbolinks:load', function () {
 
   $("#language-search").on("input", filterTableRows);
 });
-
+window.$ = $
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"

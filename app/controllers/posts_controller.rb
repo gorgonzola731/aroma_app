@@ -2,8 +2,9 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: :index
 
   def index
-    aroma_rails = ["フローラル", "ハーバル", "ウッディ", "シトラス", "和風", "スパイシー", "エキゾチック", "その他"]
+    aroma_rails = ["フローラル", "ハーバル", "ウッディ", "シトラス", "和の香り", "スパイシー", "エキゾチック", "その他"]
     @posts = Post.where(aroma: aroma_rails).order(created_at: :desc) 
+    @post = Post.new
   end
 
   def show
@@ -16,8 +17,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(title: params[:title],content: params[:content],aroma: params[:aroma],
-    user_id: current_user.id)
+    @post = Post.create!(post_params)
+    @posts = Post.all.order(created_at: :desc) 
   end
 
   def edit
@@ -35,7 +36,7 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:title, :content, :image, :aroma, :user_id)
+      params.require(:post).permit(:title, :content, :image, :aroma,).merge(user_id: current_user.id)
     end
 
 end
