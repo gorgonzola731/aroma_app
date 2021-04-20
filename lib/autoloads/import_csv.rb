@@ -6,8 +6,8 @@ class ImportCsv
        Post.create!(
          title: row["title"],
          aroma: row["aroma"],
-         content: row["content"]
-         user_id: row["user_id"]
+         content: row["content"],
+         user_id: row["user_id"],
        )
      end
   end
