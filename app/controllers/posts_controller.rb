@@ -16,8 +16,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    current_user.posts.create!(post_params)
-    user_id: @current_user.id
+    @post = Post.new(title: params[:title],content: params[:content],aroma: params[:aroma],
+    user_id: current_user.id)
   end
 
   def edit
