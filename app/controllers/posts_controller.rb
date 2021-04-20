@@ -8,6 +8,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @user = User.find_by(id: @post.user_id)
   end
 
   def new
@@ -15,7 +16,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    current_user.posts.create!(post_params)
+    @post = Post.new(title: params[:title],content: params[:content],aroma: params[:aroma],
+    user_id: current_user.id)
   end
 
   def edit
@@ -33,7 +35,7 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:title, :content, :image, :aroma)
+      params.require(:post).permit(:title, :content, :image, :aroma, :user_id)
     end
 
 end
