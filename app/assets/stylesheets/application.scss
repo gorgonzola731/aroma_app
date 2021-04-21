@@ -32,6 +32,12 @@ main {
   max-width: 1200px;
 } 
 
+/* ページネーション部分 */
+.pagination {
+  justify-content: center;
+  margin-top: 80px;
+} 
+
 /* フラッシュの色 */
 .alert-notice {
   @extend .alert-info;
