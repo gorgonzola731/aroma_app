@@ -5,7 +5,8 @@ class PostsController < ApplicationController
 
   def index
     aroma_rails = ["フローラル", "ハーバル", "ウッディ", "シトラス", "和の香り", "スパイシー", "エキゾチック", "その他"]
-    @posts = Post.where(aroma: aroma_rails).order(created_at: :desc) .page(params[:page]).per(PER_PAGE)
+    @posts = Post.where(aroma: aroma_rails).order(created_at: :desc)
+    @posts = @posts.page(params[:page]).per(PER_PAGE)
     @post = Post.new
   end
 
