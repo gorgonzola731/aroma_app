@@ -12,6 +12,7 @@
     </div>
     <div class="col-9 sidebar posts">
       <%= render 'posts', posts: @posts %>
+      <%= paginate @posts %>
     </div>
   </div>
 </div>
