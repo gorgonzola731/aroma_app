@@ -5,7 +5,7 @@
         <p>【<%= post.aroma %>】</p>
         <p class="card-text"><small><%= simple_format post.content %></small></p>
         <% if post.image? %>
-            <%= image_tag post.image.url %>
+            <%= image_tag post.image.thumb.url %>
           <% else %>
             <%= image_tag 'http://design-ec.com/d/e_others_48/l_e_others_484.png'%>
         <% end %>

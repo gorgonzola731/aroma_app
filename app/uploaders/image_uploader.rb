@@ -1,5 +1,8 @@
 class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
+  version :thumb do
+    process resize_to_fit: [100, 100]
+  end
   
   storage :file
  
@@ -18,6 +21,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   def filename
     "#{secure_token}.#{file.extension}" if original_filename.present?
   end
+
 
   protected
 
