@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'kaminari'
 gem 'carrierwave', '~> 2.0'
 gem 'remotipart'
+gem 'mini_magick'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'devise'
