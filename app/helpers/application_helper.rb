@@ -1,5 +1,10 @@
 module ApplicationHelper
+
   def max_width
-    "mx_xl"
+    if devise_controller?
+      "mw-md"
+    else
+      "mw-xl"
+    end
   end
 end
