@@ -1,6 +1,7 @@
 <% posts.each do |post| %>
   <div class="card mb-1">
     <div class="card-body">
+        <img src=<%= post.user.image %> class = "icon_image">
         <p class="card-text"><%= post.title %></p>
         <p>【<%= post.aroma %>】</p>
         <p class="card-text"><small><%= simple_format post.content %></small></p>
