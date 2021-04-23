@@ -20,9 +20,13 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.submit t('.sign_in'),class: 'btn btn-primary btn-block mt-3' %>
+    <%= f.submit t('.sign_in'),class: 'btn btn-primary  mt-3' %>
+     <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post,class: 'btn btn-primary mt-3' %>
   </div>
 <% end %>
+
+   
+
 
 <hr class="my-3">
   <%= link_to "トップページ", root_path, class:"btn btn-info btn-block" %>
