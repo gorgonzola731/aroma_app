@@ -31,11 +31,16 @@
       <small class="form-text text-muted"><%= t('.we_need_your_current_password_to_confirm_your_changes') %></small>
     </div>
 
+    <div class="field">
+    <%= f.label :image,"プロフィール画像" %><br/>
+    <%= f.file_field :image %>
+    </div>
+
     <div class="form-group">
-      <%= f.submit t('.update'), class: 'btn btn-primary btn-block' %>
+      <%= f.submit t('.update'), class: 'btn btn-primary btn-block mt-2' %>
     </div>
   <% end %>
 
-  <hr class="my-5">
+  <hr class="my-3">
   <%= link_to "トップページ", root_path, class:"btn btn-info btn-block" %>
 </div>
