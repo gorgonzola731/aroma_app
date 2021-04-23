@@ -15,6 +15,7 @@
           <% else %>
             <%= image_tag 'http://design-ec.com/d/e_others_48/l_e_others_484.png'%>
         <% end %>
+        <%= link_to 'いいね', create_like_path(post), method: :POST %>
     </div>
   </div>
 <% end %>
