@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root to: 'home#index'
   
-  devise_for :users,controllers: {
-    registrations: 'users/registrations'
+  devise_for :users, controllers: {
+    registrations: 'users/registrations',
+    passwords: 'users/passwords'
   }
 
   devise_scope :user do
