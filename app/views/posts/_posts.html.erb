@@ -16,11 +16,9 @@
             <%= image_tag 'http://design-ec.com/d/e_others_48/l_e_others_484.png'%>
         <% end %>
         
-        <% if current_user.liked_by?(post.id) %>
-          <%= link_to 'いいねを外す', destroy_like_path(post), method: :DELETE %><%= post.likes.count %>
-        <% else %>
-         <%= link_to 'いいね', create_like_path(post), method: :POST %><%= post.likes.count %>
-        <% end %>
+        <div id="likes_buttons<%= post.id %>">
+          <%= render partial: 'likes/like', locals: { post: post, like: @like} %>
+        </div>
     </div>
   </div>
 <% end %>

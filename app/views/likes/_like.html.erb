@@ -1,0 +1,16 @@
+<% if user_signed_in? %>
+
+  <% unless post.like_user(current_user.id).blank? %>
+    <%= link_to post_like_path(post_id: post.id, id: post.likes[0].id), method: :delete, remote: true do %>
+      <div class="vertical_like">
+       <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Emoji_u1f4a9.svg/220px-Emoji_u1f4a9.svg.png", size: '40x40' %>
+      </div>
+    <% end %>
+  <% else %>
+    <%= link_to post_likes_path(post.id), method: :post, remote: true do %>
+      <div class="vertical_like">
+        <%= image_tag "heart.jpeg", size: '40x40' %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
