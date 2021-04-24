@@ -3,13 +3,13 @@
   <% unless post.like_user(current_user.id).blank? %>
     <%= link_to post_like_path(post_id: post.id, id: post.likes[0].id), method: :delete, remote: true do %>
       <div class="vertical_like">
-       <i class="far fa-heart like-btn" ></i>
+       <i class="fas fa-heart unlike-btn" ></i>
       </div>
     <% end %>
   <% else %>
     <%= link_to post_likes_path(post.id), method: :post, remote: true do %>
       <div class="vertical_like">
-        <i class="fas fa-heart unlike-btn"></i>
+        <i class="far fa-heart like-btn"></i>
       </div>
     <% end %>
   <% end %>
