@@ -1,9 +1,4 @@
-$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
-@import '@fortawesome/fontawesome-free/scss/fontawesome';
-@import '@fortawesome/fontawesome-free/scss/solid';
-@import '@fortawesome/fontawesome-free/scss/regular';
-@import '@fortawesome/fontawesome-free/scss/brands';
-@import '@fortawesome/fontawesome-free/scss/v4-shims';
+
 
 /* 全体 */
 html {
@@ -45,6 +40,15 @@ main {
   justify-content: center;
   margin-top: 80px;
 } 
+
+/* いいね機能 */
+.like-btn {
+  color: #8899a6;
+}
+
+.unlike-btn {
+  color: #ff2581;
+}
 
 /* フラッシュの色 */
 .alert-notice {
