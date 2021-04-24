@@ -1,8 +1,6 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :posts, dependent: :destroy
-
+  has_many :likes
   mount_uploader :image, ImageUploader
 
   validates :name, presence: true
@@ -10,6 +8,10 @@ class User < ApplicationRecord
   validates :password, presence: true
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  def liked_by?(post_id)
+  likes.where(post_id: post_id).exists?
+  end
 
   def self.guest
     find_or_create_by!(name:' guest_user',email: 'guest@example.com') do |user|

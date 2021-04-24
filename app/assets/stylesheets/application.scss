@@ -1,3 +1,5 @@
+
+
 /* 全体 */
 html {
   height: 100%;
@@ -38,6 +40,15 @@ main {
   justify-content: center;
   margin-top: 80px;
 } 
+
+/* いいね機能 */
+.like-btn {
+  color: #8899a6;
+}
+
+.unlike-btn {
+  color: #ff2581;
+}
 
 /* フラッシュの色 */
 .alert-notice {
