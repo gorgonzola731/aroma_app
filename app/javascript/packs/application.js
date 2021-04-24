@@ -16,6 +16,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import '../../assets/stylesheets/application';
 import "bootstrap/dist/js/bootstrap"
+import '@fortawesome/fontawesome-free/js/all';
 
 
 Rails.start()
