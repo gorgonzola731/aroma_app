@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'home#index'
-  
+  resources :users
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     passwords: 'users/passwords'
@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   end
   resources :posts do
     resources :likes, only: [:create, :destroy]
+    resources :comments, only: [:create, :destroy]
   end
 end

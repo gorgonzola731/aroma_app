@@ -1,6 +1,7 @@
 <% posts.each do |post| %>
   <div class="card mb-1">
     <div class="card-body">
+      <%= link_to post do %>
         <% if post.user.image? %>
           <img src=<%= post.user.image %> class = "icon_image">
         <% else %>
@@ -15,7 +16,7 @@
           <% else %>
             <%= image_tag 'http://design-ec.com/d/e_others_48/l_e_others_484.png'%>
         <% end %>
-        
+      <% end %>
         <div id="likes_buttons<%= post.id %>">
           <%= render partial: 'likes/like', locals: { post: post, like: @like} %>
         </div>
