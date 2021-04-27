@@ -1,15 +1,31 @@
-<div class="post_detail">
+<div class="post_info">
     <div class="row">
-        <div class="col-4">
-            <% if @post.user.image? %>
-                <img src=<%= @post.user.image %> class = "icon_image">
-            <% else %>
-                <%= image_tag 'profile_default2.jpg' ,class: "icon_image" %>
-            <% end %>
+        <div class="col-4 pl-5">
+            <div class="user_info">
+                <% if @post.user.image? %>
+                    <img src=<%= @post.user.image %> class = "icon_image">
+                <% else %>
+                    <%= image_tag 'profile_default2.jpg' ,class: "icon_image" %>
+                <% end %>
+                <div class="user_name">
+                    <p>【<%= @user.name %>】</p>
+                </div>
+            </div>
         </div>
 
-        <div class="col-8">
-        </div>
+        
+
+    <div class="col-8">
+        <h2 class="post_title"><%= @post.title %></h2>
+        <p>【<%= @post.aroma %>】</p>
+        <p class="post_content"><%= @post.content %></p>
+    </div>
+</div>
+
+    <div class="post_img_full mt-5">
+        <% if @post.image? then %>
+            <%= image_tag @post.image.url class: 'full_image'%>
+        <% end %>
     </div>
 
     <div class="comment-create my-5">
