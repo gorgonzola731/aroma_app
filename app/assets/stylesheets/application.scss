@@ -51,6 +51,13 @@ main {
   font-size: 25px;
 }
 
+.vertical_like {
+  text-align: center ;
+  margin:100px 100px 0 35px;
+  width: 100px;
+  display: flex;
+}
+
 /* ページネーション部分 */
 .pagination {
   justify-content: center;
