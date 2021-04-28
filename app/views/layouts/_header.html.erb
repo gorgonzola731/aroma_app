@@ -11,7 +11,7 @@
 
 
         <% if user_signed_in? %>
-          <%= link_to '投稿画面へ', root_path, class: "nav-item nav-link active"%>
+          <%= link_to '投稿一覧へ', posts_path, class: "nav-item nav-link active"%>
           <%= link_to "アカウント編集", edit_user_registration_path ,class: "nav-item nav-link active"%>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" },class: "nav-item nav-link active" %>
       <% else %>
