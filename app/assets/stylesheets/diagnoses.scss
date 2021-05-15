@@ -1,0 +1,61 @@
+.base-container {
+  margin-top: 30px;
+}
+
+.title {
+  margin: 30px auto;
+}
+
+ul {
+  list-style: none;
+}
+
+.questions {
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin: 15px auto;
+  box-sizing: border-box;
+}
+
+
+.result.ResultA,.result.ResultB,.result.ResultC,.result.ResultD,.result.ResultE,.result.ResultF,.result.ResultG,.result.ResultH,.result.ResultI,.result.ResultJ {
+  display: none;
+}
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  }
+
+
+#wrapper .title {
+  font-weight: bold;
+}
+
+#wrapper .questions {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); 
+    background: rgba(255,255,255,0.5);
+    width: 50%;
+    font-size: 20px;
+    color: #2f4f4f;/*文字色*/
+    line-height: 2rem;
+    border-radius: 50px;
+}
+
+.btn-border {
+  border: 2px solid #000;
+  border-radius: 0;
+  background: #fff;
+}
+
+.btn-border:hover {
+  color: #fff;
+  background: #000;
+}
