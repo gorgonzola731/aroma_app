@@ -1,3 +1,7 @@
 <%= stylesheet_link_tag 'tips', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-<h1>hello world!</h1>
+<% @tips.each do |tip| %>
+  <%= image_tag tip.image.url %>
+  <p>【<%= tip.title %>】</p>
+  <p><%= tip.article %></p>
+<% end %>
