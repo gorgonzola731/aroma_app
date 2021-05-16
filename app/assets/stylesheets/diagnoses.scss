@@ -57,9 +57,23 @@ ul {
 
 .btn-border:hover {
   color: #808080;
-  background: #FAF0E6;
+  background: #FAFAD2;
 }
 
 .result .sample {
   width: 100%;
+  padding: 11px;
+	background-color: #FFFFFF;
+	box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+}
+
+.result {
+  [class$="text"] {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+  }
+  [class$="recommend"] {
+    text-align: center;
+  }
 }
