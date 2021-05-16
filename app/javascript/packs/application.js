@@ -17,6 +17,7 @@ import "channels"
 import '../../assets/stylesheets/application';
 import "bootstrap/dist/js/bootstrap"
 import '@fortawesome/fontawesome-free/js/all';
+import './diagnoses'
 
 
 Rails.start()
