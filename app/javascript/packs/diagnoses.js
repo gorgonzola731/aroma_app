@@ -20,24 +20,34 @@ $(document).on('turbolinks:load', function () {
       
       if (typeANum >= max) {
         $(".ResultA").fadeIn();
+        $("#wrapper").fadeOut();
       } else if (typeBNum >= max) {
         $(".ResultB").fadeIn();
+        $("#wrapper").fadeOut();
       } else if (typeCNum >= max) {
         $(".ResultC").fadeIn();
+        $("#wrapper").fadeOut();
       } else if (typeDNum >= max) {
         $(".ResultD").fadeIn();
+        $("#wrapper").fadeOut();
       } else if (typeENum >= max) {
         $(".ResultE").fadeIn();
+        $("#wrapper").fadeOut();
       } else if (typeFNum >= max) {
         $("ResultF").fadeIn();
+        $("#wrapper").fadeOut();
       } else if (typeGNum >= max) {
         $("ResultG").fadeIn();
+        $("#wrapper").fadeOut();
       } else if (typeHNum >= max) {
         $("ResultH").fadeIn();
+        $("#wrapper").fadeOut();
       } else if (typeINum >= max) {
         $("ResultI").fadeIn();
+        $("#wrapper").fadeOut();
       } else if (typeJNum >= max) {
         $("ResultJ").fadeIn();
+        $("#wrapper").fadeOut();
       }
     }
   });
