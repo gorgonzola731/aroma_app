@@ -26,6 +26,8 @@ gem 'carrierwave', '~> 2.0'
 gem 'remotipart'
 gem 'mini_magick'
 gem 'activeadmin'
+gem 'redcarpet'
+gem 'coderay'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'devise'
