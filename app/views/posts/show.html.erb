@@ -28,11 +28,12 @@
             <%= image_tag @post.image.url ,class: 'full_image'%>
         <% end %>
     </div>
-
-    <div id="likes_buttons<%= @post.id %>">
-        <%= render partial: 'likes/like', locals: { post: @post, like: @like} %>
+    <div class='like_to_post'>
+        <p class="like_lead">この投稿が気に入ったらいいねをしてみよう！</p>
+        <div id="likes_buttons<%= @post.id %>">
+            <%= render partial: 'likes/like', locals: { post: @post, like: @like} %>
+        </div>
     </div>
-
     <div class="comment-create my-5">
         <h3 class="text-center">コメントを投稿する</h3>
         <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
@@ -41,3 +42,9 @@
     <div id="comments_area">
         <%= render partial: 'comments/index', locals: { comments: @comments } %>
     </div>  
+
+    <hr class="my-3">
+    <div class=botton-group>
+        <%= link_to "投稿一覧へ", posts_path, class:"btn btn-outline-primary btn-block" %>
+        <%= link_to "トップページ", root_path, class:"btn btn-outline-primary btn-block" %>
+    </div>
