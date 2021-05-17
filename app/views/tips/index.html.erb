@@ -1,7 +1,17 @@
 <%= stylesheet_link_tag 'tips', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-<% @tips.each do |tip| %>
-  <%= image_tag tip.image.url %>
-  <p>【<%= tip.title %>】</p>
-  <p><%= tip.article %></p>
-<% end %>
+<div class="row">
+    <% @tips.each do |tip| %>
+      <div class="col-12 col-md-6 col-lg-4 text-card-container">
+        <%= link_to tip, class: "card content-card border-dark mb-3 text-decoration-none", rel: "noopener noreferrer" do %>
+          <div class="card-header p-0">
+            <%= image_tag tip.image.url, class: "card-img-top" %>
+          </div>
+          <div class="card-body text-dark text-card-body">
+            <p class="card-text text-title mt-4"><%= tip.title %></p>
+            <p><%= tip.article %></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+</div>
