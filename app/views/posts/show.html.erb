@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag 'posts', media: 'all', 'data-turbolinks-track': 'reload' %>
 <div class="post_info">
     <div class="row">
         <div class="col-4 pl-5">
@@ -24,7 +25,7 @@
 
     <div class="post_img_full mt-5">
         <% if @post.image? then %>
-            <%= image_tag @post.image.url class: 'full_image'%>
+            <%= image_tag @post.image.url ,class: 'full_image'%>
         <% end %>
     </div>
 
