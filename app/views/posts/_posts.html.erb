@@ -1,22 +1,27 @@
 <% posts.each do |post| %>
   <div class="card mb-1">
     <div class="card-body">
-      <%= link_to post do %>
-        <% if post.user.image? %>
-          <img src=<%= post.user.image %> class = "icon_image">
-        <% else %>
-          <%= image_tag 'profile_default2.jpg' ,class: "icon_image" %>
-        <% end %>
-
-        <p class="card-text"><%= post.title %></p>
-        <p>【<%= post.aroma %>】</p>
-        <p class="card-text"><small><%= simple_format post.content %></small></p>
-        <% if post.image? %>
-            <%= image_tag post.image.thumb.url %>
-          <% else %>
-            <%= image_tag 'http://design-ec.com/d/e_others_48/l_e_others_484.png'%>
-        <% end %>
-      <% end %>
+      <div class="row">
+        <div class="icon_space col-2">
+            <%= link_to post do %>
+              <% if post.user.image? %>
+                <img src=<%= post.user.image %> class = "icon_image">
+              <% else %>
+                <%= image_tag 'profile_default2.jpg' ,class: "icon_image" %>
+            <% end %>
+        </div>
+        <div class='col-10'>
+            <p class='card-text'><%= post.title %></p>
+            <p>【<%= post.aroma %>】</p>
+            <p><%= post.content %></p>
+            <% if post.image? %>
+                <%= image_tag post.image.thumb.url ,class: 'thumb-image'%>
+              <% else %>
+                <%= image_tag 'noimage.png',class: 'noimage' %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 <% end %>

@@ -4,9 +4,9 @@
         <div class="col-4 pl-5">
             <div class="user_info">
                 <% if @post.user.image? %>
-                    <img src=<%= @post.user.image %> class = "icon_image">
+                    <img src=<%= @post.user.image %> class = "icon_image_lg">
                 <% else %>
-                    <%= image_tag 'profile_default2.jpg' ,class: "icon_image" %>
+                    <%= image_tag 'profile_default2.jpg' ,class: "icon_image_lg" %>
                 <% end %>
                 <div class="user_name">
                     <p>【<%= @user.name %>】</p>

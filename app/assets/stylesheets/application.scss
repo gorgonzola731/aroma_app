@@ -82,21 +82,6 @@ main {
   @extend .alert-danger;
 }  
 
-/* 画像 */
-
-.post_img_full{
-  text-align: center;
-}
-
-.icon_image {
-  width: 200px;
-  height: 200px;
-  //サイズ指定
-  border-radius: 100px;
-  //画像を丸くする
-  object-fit: cover;
-  //タテヨコ比を変えないままトリミング
-}
 
 /*
  *= require_tree .
