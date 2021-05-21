@@ -5,17 +5,16 @@
   </div>
 
  <div class="container mt-5">
-  <div class="row">
-    <div class="col-3 sidebar">
-      <button type="button" class="btn btn-primary w-100" data-toggle="modal" data-target="#exampleModal">
-        投稿
+    <div class="modal-area">
+      <p class=post-message>癒やしの時間をシェアしませんか?</p>
+      <button type="button" class="btn btn-primary w-25" data-toggle="modal" data-target="#exampleModal">
+        投稿する
       </button>
     </div>
-    <div class="col-9 sidebar posts">
+    <div class="posts">
       <%= render 'posts', posts: @posts %>
       <%= paginate @posts %>
     </div>
-  </div>
 </div>
 
 <!-- Modal -->
