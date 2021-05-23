@@ -1,27 +1,35 @@
 <% posts.each do |post| %>
   <div class="card mb-1">
+  <%= link_to post do %>
     <div class="card-body">
-      <div class="row">
-        <div class="icon_space col-2">
-            <%= link_to post do %>
+        <div class="icon_space">
               <% if post.user.image? %>
                 <img src=<%= post.user.image %> class = "icon_image">
               <% else %>
                 <%= image_tag 'profile_default2.jpg' ,class: "icon_image" %>
             <% end %>
         </div>
-        <div class='col-10'>
+        
+        <div class='text_space'>
             <p class='card-text'><%= post.title %></p>
             <p>【<%= post.aroma %>】</p>
-            <p><%= post.content %></p>
+            <p class='text_content'><%= post.content %></p>
+        </div>
+
+        <div class='thumbnail_space'>
+        <div class="like_space">
+          <i class="fas fa-heart home-icon"></i> <%= post.likes.count %>
+        </div>
             <% if post.image? %>
                 <%= image_tag post.image.thumb.url ,class: 'thumb-image'%>
               <% else %>
                 <%= image_tag 'noimage.png',class: 'noimage' %>
             <% end %>
-          <% end %>
         </div>
-      </div>
     </div>
+    <% end %>
+    <span class="text-muted pl-2">
+      <i class='fas fa-clock home-icon'></i> <%= time_ago_in_words(post.created_at) %>前
+    </span>
   </div>
 <% end %>
