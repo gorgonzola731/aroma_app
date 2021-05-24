@@ -21,6 +21,17 @@ main {
   padding: 1rem;
 }
 
+.navbar-brand {
+  font-family: 'Londrina Shadow', cursive;
+  font-size: 20px;
+}
+
+footer {
+  font-family: 'Londrina Shadow', cursive;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+}
+
 /* max-width */
 
 .mw-md{
@@ -57,6 +68,12 @@ main {
   color: #ff2581;
 }
 
+.button-group {
+  max-width: 800px;
+  justify-content: center;
+  margin: auto;
+}
+
 /* フラッシュの色 */
 .alert-notice {
   @extend .alert-info;
@@ -73,3 +90,4 @@ main {
  */
 
 @import "bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Cabin+Sketch:wght@700&family=Kosugi+Maru&family=Londrina+Shadow&display=swap');
