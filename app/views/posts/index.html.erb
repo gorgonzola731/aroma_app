@@ -1,21 +1,26 @@
-<div class="wrapper">
-  <div class="contents-title text-center py-3">
-    <h1>everyone&apos;s aroma</h1>
+<%= stylesheet_link_tag 'posts', media: 'all', 'data-turbolinks-track': 'reload' %>
+<div id="wrapper" class='big-bg'>
+  <div class="post-content ">
+    <h2 class='page-title'>everyone&apos;s aroma</h2>
+    <p>癒やしの時間をシェアしませんか?</p>
   </div>
+</div>
 
- <div class="container mt-5">
-  <div class="row">
-    <div class="col-3 sidebar">
-      <button type="button" class="btn btn-primary w-100" data-toggle="modal" data-target="#exampleModal">
-        投稿
-      </button>
-    </div>
-    <div class="col-9 sidebar posts">
+<div class="container mt-4">
+  <div class='main-contents'>
+    <div class="posts">
       <%= render 'posts', posts: @posts %>
       <%= paginate @posts %>
     </div>
+    <aside>
+      <%= render 'side-bar' %>
+    </aside>
   </div>
-</div>
+  <div class="modal-area">
+    <button type="button" class="fixed_btn" data-toggle="modal" data-target="#exampleModal">
+      <i class="far fa-comment-dots fa-2x"></i>  投稿する
+    </button>
+  </div>
 
 <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

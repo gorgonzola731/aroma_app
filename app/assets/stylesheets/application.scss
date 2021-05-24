@@ -35,29 +35,6 @@ main {
   max-width: 1200px;
 } 
 
-/* 投稿詳細部分 */
-.user_info {
-  text-align: center;
-.user_name {
-  margin-top: 20px;
-}
-
-}
-
-.post_title {
-  font-size: 35px;
-}
-.post_content {
-  font-size: 25px;
-}
-
-.vertical_like {
-  text-align: center ;
-  margin:100px 100px 0 35px;
-  width: 100px;
-  display: flex;
-}
-
 /* ページネーション部分 */
 .pagination {
   justify-content: center;
@@ -65,6 +42,13 @@ main {
 } 
 
 /* いいね機能 */
+.vertical_like {
+  text-align: center ;
+  margin:100px 100px 0 35px;
+  width: 100px;
+  display: flex;
+}
+
 .like-btn {
   color: #8899a6;
 }
@@ -82,27 +66,6 @@ main {
   @extend .alert-danger;
 }  
 
-/* 画像 */
-
-.post_img_full{
-  text-align: center;
-}
-
-.icon_image {
-  width: 200px;
-  height: 200px;
-  //サイズ指定
-  border-radius: 100px;
-  //画像を丸くする
-  object-fit: cover;
-  //タテヨコ比を変えないままトリミング
-}
-
-.full_image {
-  width: 100%;
-  max-height: 700px;
-
-}
 
 /*
  *= require_tree .

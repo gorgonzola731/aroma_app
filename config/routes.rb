@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   
   root to: 'home#index'
   get 'diagnoses', to: 'home#diagnoses'
-  resources :users, only: [:show]
+  get 'users/show'
   resources :tips, only: [:index, :show]
 
   devise_for :users, controllers: {
