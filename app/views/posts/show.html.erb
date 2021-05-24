@@ -1,50 +1,54 @@
 <%= stylesheet_link_tag 'posts', media: 'all', 'data-turbolinks-track': 'reload' %>
+<div id="wrapper" class='big-bg'>
+  <div class="post-content ">
+    <h2 class='page-title'>everyone&apos;s aroma</h2>
+    <p>癒やしの時間をシェアしませんか?</p>
+  </div>
+</div>
+
 <div class="post_info">
-    <div class="row">
-        <div class="col-4 pl-5">
-            <div class="user_info">
-                <% if @post.user.image? %>
-                    <img src=<%= @post.user.image %> class = "icon_image_lg">
-                <% else %>
-                    <%= image_tag 'profile_default2.jpg' ,class: "icon_image_lg" %>
-                <% end %>
-                <div class="user_name">
-                    <p>【<%= @user.name %>】</p>
-                </div>
-            </div>
+    <div class="user_info">
+        <% if @post.user.image? %>
+            <img src=<%= @post.user.image %> class = "icon_image_side">
+        <% else %>
+            <%= image_tag 'profile_default2.jpg' ,class: "icon_image_side" %>
+        <% end %>
+        <div class="user_name">
+            <p><%= @user.name %></p>
         </div>
-
-        
-
-    <div class="col-8">
+    </div>
+    <div class='post_entry'>
         <h2 class="post_title"><%= @post.title %></h2>
-        <p>【<%= @post.aroma %>】</p>
-        <p class="post_content"><%= @post.content %></p>
+        <p>ジャンル【<%= @post.aroma %>】</p>
     </div>
 </div>
 
-    <div class="post_img_full mt-5">
-        <% if @post.image? then %>
-            <%= image_tag @post.image.url ,class: 'full_image'%>
-        <% end %>
-    </div>
-    <div class='like_to_post'>
-        <p class="like_lead">この投稿が気に入ったらいいねをしてみよう！</p>
-        <div id="likes_buttons<%= @post.id %>">
-            <%= render partial: 'likes/like', locals: { post: @post, like: @like} %>
-        </div>
-    </div>
-    <div class="comment-create my-5">
-        <h3 class="text-center">コメントを投稿する</h3>
-        <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
-    </div>
+<div class=post_content>
+    <p><%= @post.content %></p>
+</div>
 
-    <div id="comments_area">
-        <%= render partial: 'comments/index', locals: { comments: @comments } %>
-    </div>  
-
-    <hr class="my-3">
-    <div class=botton-group>
-        <%= link_to "投稿一覧へ", posts_path, class:"btn btn-outline-primary btn-block" %>
-        <%= link_to "トップページ", root_path, class:"btn btn-outline-primary btn-block" %>
+<div class="post_img_full mt-5">
+    <% if @post.image? then %>
+        <%= image_tag @post.image.url ,class: 'full_image'%>
+    <% end %>
+</div>
+<div class='like_to_post'>
+    <p class="like_lead">この投稿が気に入ったらいいねをしてみよう！</p>
+    <div id="likes_buttons<%= @post.id %>">
+        <%= render partial: 'likes/like', locals: { post: @post, like: @like} %>
     </div>
+</div>
+<div class="comment-create my-5">
+    <h3 class="text-center">コメントを投稿する</h3>
+    <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
+</div>
+
+<div id="comments_area">
+    <%= render partial: 'comments/index', locals: { comments: @comments } %>
+</div>  
+
+<hr class="my-3">
+<div class=botton-group>
+    <%= link_to "投稿一覧へ", posts_path, class:"btn btn-outline-primary btn-block" %>
+    <%= link_to "トップページ", root_path, class:"btn btn-outline-primary btn-block" %>
+</div>

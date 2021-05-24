@@ -1,6 +1,7 @@
+<%= stylesheet_link_tag 'posts', media: 'all', 'data-turbolinks-track': 'reload' %>
 <div class="comment_form mt-4">
     <%= form_with(model: [post, comment], url: post_comments_path(@post)) do |f| %>
         <%= f.text_area :content, class: "form-control" %>
-        <%= f.submit "送信", class: "btn btn-outline-dark comment-submit  mt-3" %>
+        <%= f.submit "送信", class: "btn btn-outline-primary comment-submit w-25 mt-3" %>
     <% end %>
 </div>
