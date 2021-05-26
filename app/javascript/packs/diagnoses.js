@@ -16,7 +16,7 @@ $(document).on('turbolinks:load', function () {
         typeHNum = $(".typeH:checked").length,
         typeINum = $(".typeI:checked").length,
         typeJNum = $(".typeJ:checked").length;
-      const max = Math.max(typeANum, typeBNum, typeCNum, typeDNum, typeENum,typeFNum,typeGNum,typeHNum,typeINum,typeJNum); 
+      const max = Math.max(typeANum, typeBNum, typeCNum, typeDNum, typeENum, typeFNum, typeGNum, typeHNum, typeINum, typeJNum); 
       
       if (typeANum >= max) {
         $(".ResultA").fadeIn();

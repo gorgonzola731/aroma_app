@@ -6,210 +6,231 @@
     <p>質問に答えてあなたにピッタリのアロマを見つけませんか？</p>
 </div>
 
-  <div id="wrapper">
+<div id="wrapper">
   <%= image_tag 'finder-bg' ,class: 'finder-bg' %>
-        <ul class="questions text-center">
-          <h1 class="title">Questions</h1>
-          <li class="textBox">
-            <span class="text">Q1. 寝付きがいい方ではない</span>
-            <label class="yes"><input class="typeA typeG typeI" name="q01" type="radio">YES
-            </label>
-            <label class="no"><input class="typeB typeD" name="q01" type="radio">NO
-            </label>
-          </li>
-          <li class="textBox">
-            <span class="text">Q2.集中力が途切れやすい</span>
-            <label class="yes"><input class="typeB typeD" name="q02" type="radio">YES
-            </label>
-            <label class="no"><input class="typeF typeG" name="q02" type="radio">NO
-            </label>
-          </li>
-          <li class="textBox">
-            <span class="text">Q3. 夜は精神的に落ち込みやすい</span>
-            <label class="yes"><input class="typeE typeJ" name="q03" type="radio">YES
-            </label>
-            <label class="no"><input class="typeG typeC" name="q03" type="radio">NO
-            </label>
-          </li>
-          <li class="textBox">
-            <span class="text">Q4. 人より緊張しやすいと思う</span>
-            <label class="yes"><input class="typeA typeF" name="q04" type="radio">YES
-            </label>
-            <label class="no"><input class="typeH typeD" name="q04" type="radio">NO
-            </label>
-          </li>
-          <li class="textBox">
-            <span class="text">Q5. 入浴時間はは15分未満だ</span>
-            <label class="yes"><input class="typeD typeJ" name="q05" type="radio">YES
-            </label>
-            <label class="no"><input class="typeA typeB" name="q05" type="radio">NO
-            </label>
-          </li>
-          <li class="textBox">
-            <span class="text">Q6.お肌のトラブルに悩んでいる </span>
-            <label class="yes"><input class="typeG typeF" name="q06" type="radio">YES
-            </label>
-            <label class="no"><input name="q06" type="radio">NO
-            </label>
-          </li>
-          <li class="textBox">
-            <span class="text">Q7. 手足が冷えやすい</span>
-            <label class="yes"><input class="typeD typeJ" name="q07" type="radio">YES
-            </label>
-            <label class="no"><input class="typeA typeB" name="q07" type="radio">NO
-            </label>
-          </li>
-          <li class="textBox">
-            <span class="text">Q8.代謝が落ちてきた</span>
-            <label class="yes"><input class="typeD typeA" name="q08" type="radio">YES
-            </label>
-            <label class="no"><input name="q08" type="radio">NO
-            </label>
-          </li>
-          <li class="textBox">
-            <span class="text">Q9.お子様がいる</span>
-            <label class="yes"><input class="typeB typeH" name="q09" type="radio">YES
-            </label>
-            <label class="no"><input class="typeG typeJ" name="q09" type="radio">NO
-            </label>
-          </li>
-          <li class="textBox">
-            <span class="text">Q10. 目が疲れやすい</span>
-            <label class="yes"><input class="typeB typeA" name="q10" type="radio">YES
-            </label>
-            <label class="no"><input  name="q10" type="radio">NO
-            </label>
-          </li>
-          <li class="textBox">
-            <span class="text">Q11.朝型生活だ</span>
-            <label class="yes"><input class="typeB typeD" name="q11" type="radio">YES
-            </label>
-            <label class="no"><input class="typeA typeC" name="q11" type="radio">NO
-            </label>
-          </li>
-          <li class="textBox">
-            <span class="text">Q12.怒りっぽい</span>
-            <label class="yes"><input class="typeE typeG typeH" name="q12" type="radio">YES
-            </label>
-            <label class="no"><input name="q12" type="radio">NO
-            </label>
-          </li>
-          <li class="textBox">
-            <span class="text">Q13. 家にいても仕事のことが忘れられない</span>
-            <label class="yes"><input class="typeA typeB" name="q13" type="radio">YES
-            </label>
-            <label class="no"><input class="typeG typeF" name="q13" type="radio">NO
-            </label>
-          </li>
-          <li class="textBox">
-            <span class="text">Q14.お腹周りが気になる</span>
-            <label class="yes"><input class="typeF typeE" name="q14" type="radio">YES
-            </label>
-            <label class="no"><input  name="q14" type="radio">NO
-            </label>
-          </li>
-          <li class="textBox">
-            <span class="text">Q15.足がむくむ</span>
-            <label class="yes"><input class="typeD typeG" name="q15" type="radio">YES
-            </label>
-            <label class="no"><input  name="q15" type="radio">NO
-            </label>
-          </li>
+    <ul class="questions text-center">
+      <h1 class="title">Questions</h1>
+      <p>(今のご気分でお答えください)</p>
 
-          <button class="btn btn-border w-50 mt-2">Check!</button>
-        </ul>
-    
-  </div>
+      <li class="textBox">
+        <span class="text">Q1. 気分が落ち込んでいる</span>
+        <label class="yes"><input class="typeC typeE" name="q01" type="radio">YES
+        </label>
+        <label class="no"><input class="typeA typeJ"name="q01" type="radio">NO
+        </label>
+      </li>
+
+      <li class="textBox">
+        <span class="text">Q2.集中力を高めたい</span>
+        <label class="yes"><input class="typeD typeE" name="q02" type="radio">YES
+        </label>
+        <label class="no"><input class="typeB typeG"name="q02" type="radio">NO
+        </label>
+      </li>
+
+      <li class="textBox">
+        <span class="text">Q3. 体内時計が乱れている</span>
+        <label class="yes"><input class="typeA typeB" name="q03" type="radio">YES
+        </label>
+        <label class="no"><input class="typeH typeD" name="q03" type="radio">NO
+        </label>
+      </li>
+
+      <li class="textBox">
+        <span class="text">Q4. 最近眠りが浅い</span>
+        <label class="yes"><input class="typeA typeF" name="q04" type="radio">YES
+        </label>
+        <label class="no"><input class="typeE typeI" name="q04" type="radio">NO
+        </label>
+      </li>
+
+      <li class="textBox">
+        <span class="text">Q5. 日常を忘れたい気分だ</span>
+        <label class="yes"><input class="typeF typeJ" name="q05" type="radio">YES
+        </label>
+        <label class="no"><input class="typeD typeE" name="q05" type="radio">NO
+        </label>
+      </li>
+
+      <li class="textBox">
+        <span class="text">Q6.お肌のトラブルに悩んでいる</span>
+        <label class="yes"><input class="typeC typeG" name="q06" type="radio">YES
+        </label>
+        <label class="no"><input class="typeA typeB" name="q06" type="radio">NO
+        </label>
+      </li>
+
+      <li class="textBox">
+        <span class="text">Q7. 冷え性に悩んでいる</span>
+        <label class="yes"><input class="typeH typeI typeD" name="q07" type="radio">YES
+        </label>
+        <label class="no"><input name="q07" type="radio">NO
+        </label>
+      </li>
+
+      <li class="textBox">
+        <span class="text">Q8.食欲が落ち込んでいる</span>
+        <label class="yes"><input class="typeB typeD" name="q08" type="radio">YES
+        </label>
+        <label class="no"><input name="q08" type="radio">NO
+        </label>
+      </li>
+
+      <li class="textBox">
+        <span class="text">Q9.理由もなくイライラする</span>
+        <label class="yes"><input class="typeA typeF" name="q09" type="radio">YES
+        </label>
+        <label class="no"><input class="typeD typeE" name="q09" type="radio">NO
+        </label>
+      </li>
+
+      <li class="textBox">
+        <span class="text">Q10. 胃腸の調子が悪い</span>
+        <label class="yes"><input class="typeG typeB" name="q10" type="radio">YES
+        </label>
+        <label class="no"><input name="q10" type="radio">NO
+        </label>
+      </li>
+
+      <li class="textBox">
+        <span class="text">Q11.緊張を解したい場面だ</span>
+        <label class="yes"><input class="typeE typeJ" name="q11" type="radio">YES
+        </label>
+        <label class="no"><input class="typeH typeD" name="q11" type="radio">NO
+        </label>
+      </li>
+
+      <li class="textBox">
+        <span class="text">Q12.風邪はいつも喉からくる</span>
+        <label class="yes"><input class="typeH typeI" name="q12" type="radio">YES
+        </label>
+        <label class="no"><input name="q12" type="radio">NO
+        </label>
+      </li>
+
+      <li class="textBox">
+        <span class="text">Q13. 家にいても仕事のことが忘れられない</span>
+        <label class="yes"><input class="typeF typeJ" name="q13" type="radio">YES
+        </label>
+        <label class="no"><input class="typeA typeC" name="q13" type="radio">NO
+        </label>
+      </li>
+
+      <li class="textBox">
+        <span class="text">Q14.足のむくみが気になる</span>
+        <label class="yes"><input class="typeD typeH typeI" name="q14" type="radio">YES
+        </label>
+        <label class="no"><input name="q14" type="radio">NO
+        </label>
+      </li>
+
+      <button class="btn btn-border w-50 mt-2">Check!</button>
+    </ul>
+</div>
 
         
-      <div class="result ResultA">
-        <div class="ResultA__recommend">あなたにぴったりなのは・・・・</div>
-        <div class="ResultA__Amenu">
-          <div class="ResultA__Amenu__text">ラベンダー</div>
-          <div class="ResultA__Amenu__detail">香りは繊細でフローラル。同時にウッディでもありくっきりとした輪郭があり、品の良さが感じられます。ラベンダーは体の不調にもよく使われ、そのマルチぶりはまさに「万能薬」です。高いリラックス効果があるため、ストレスからくる消化器系の症状に役立つほか、高い血圧を下げて心臓の動きを落ち着かせる作用があります。女性の体のトラブル全般も守備範囲で生理不順を整えて生理痛を減らし、出産の苦痛を和らげると言います。抗菌作用もあるので、気管支炎や喉の炎症などに使われる中、防虫成分も含まれているため、虫除け剤としても知られています。</div>
-          <div class="ResultA__Amenu__image"><%= image_tag 'lavender.jpg' ,class: "recommend_image" %></div>
-        </div>
+    <div class="result ResultA">
+      <div class="ResultA__recommend">あなたにぴったりなのは・・・・</div>
+      <div class="ResultA__Amenu">
+        <div class="ResultA__Amenu__text">ラベンダー</div>
+        <div class="ResultA__Amenu__detail">香りは繊細でフローラル。同時にウッディでもありくっきりとした輪郭があり、品の良さが感じられます。ラベンダーは体の不調にもよく使われ、そのマルチぶりはまさに「万能薬」です。高いリラックス効果があるため、ストレスからくる消化器系の症状に役立つほか、高い血圧を下げて心臓の動きを落ち着かせる作用があります。女性の体のトラブル全般も守備範囲で生理不順を整えて生理痛を減らし、出産の苦痛を和らげると言います。人は、交感神経と副交感神経によって体の生命維持機能を調節し、また心の安定を保っています。この交感神経と副交感神経のバランスが崩れると、体や心に様々な不調をきたすようになります。ラベンダーの香りをかぐと、副交感神経が優位になって、リラックスした気分になります。また、交感神経による緊張がゆるむことから血圧が低下したり、痙攣を抑えたりするとされています。これらの効果から、うつや無気力、不眠、ストレス解消といった心へのよい作用と、血圧低下や筋肉の緊張をほぐすなど体へのよい作用の両面が期待できます。</div>
+        <div class="ResultA__Amenu__image"><%= image_tag 'lavender.jpg' ,class: "recommend_image" %></div>
+        <%= render 'reload' %>
       </div>
-
-      <div class="result ResultB">
-        <div class="ResultB__recommend">あなたにぴったりなのは・・・・</div>
-        <div class="ResultB__Amenu">
-          <div class="ResultB__Bmenu__text">ローズマリー</div>
-          <div class="ResultB__Bmenu__detail">頭の中をリフレッシュするような強いハーブの香りが特徴です。爽やかな清涼感の中にほのかな甘さもあります。ローズマリーに多く含まれているα-ピネンという成分はメンタルの疲れや無気力を回復させる働きもあります。</div>
-          <%= image_tag 'rosemary.jpg' ,class: "recommend_image" %>
-          <div class="ResultB__Bmenu__image"><%= image_tag 'rosemary.jpg' ,class: "recommend_image" %></div>
-        </div>
-      </div>
-
-      <div class="result ResultC">
-        <div class="ResultC__recommend">あなたにぴったりなのは・・・・</div>
-        <div class="ResultC__Cmenu">
-          <div class="ResultC__Cmenu__text">ゼラニウム</div>
-          <div class="ResultC__Cmenu__detail">ローズに非常に似た香りがありますがローズの精油ほど効果ではないため昔から香水の原料として親しまれていました。ゼラニウムの得意技は心身両面のバランスを取ること。体に対してはホルモンや消化液皮脂の分泌を調節します。女性にとっては生理前後の不快な症状を抑えるのに役立ちます。心に対する働きとしては、甘い香りが気分を明るくさせ不安を鎮める作用があります。最近では炎症を抑える効果があることが明らかになり、トリートメントでリウマチや関節炎に使われることが増えています。</div>
-          <div class="ResultC__Cmenu__image"><%= image_tag 'geranium.jpg' ,class: "recommend_image" %></div>
-        </div>
-      </div>
-      
-      <div class="result ResultD">
-        <div class="ResultD__recommend">あなたにぴったりなのは・・・・</div>
-        <div class="ResultD__Dmenu">
-          <div class="ResultD__Dmenu__text">スイートオレンジ</div>
-          <div class="ResultD__Dmenu__detail">年齢や性別問わず幅広く好まれ比較的シーンを選ばず利用できます。子供が眠れない時や落ち着いて何かに取り組みたい時などに芳香剤やオイルトリートメントでこの香りを使うと効果バツグンです。血行を良くして体を温める効果もあるため足浴にぴったり。腸の動きの促して食欲を増進させるなど消化器官全般にも良く働きかけてくれます。</div>
-          <div class="ResultD__Dmenu__image"><%= image_tag 'sweetorange.jpg' ,class: "recommend_image" %></div>
-        </div>
-        
-      </div>
-      <div class="result ResultE">
-        <div class="ResultE__recommend">あなたにぴったりなのは・・・・</div>
-        <div class="ResultE__Emenu">
-          <div class="ResultE__Emenu__text">ベルガモット</div>
-          <div class="ResultE__Emenu__detail">ベルガモットの香りは少し複雑でシトラス系の中では個性的な部類です。爽やかなリモネンの香りの中に少し甘いフローラルな香りがするのはラベンダーにも含まれる酢酸リナリルを含むためです。さらに繊細なスパイシーさも感じられるためリフレッシュとリラックスの両方の目的で使うことができます。不安な気持ちを和らげ自律神経の乱れからくる不眠にも優しく作用します。</div>
-          <div class="ResultE__Emenu__image"><%= image_tag 'bergamot.jpg' ,class: "recommend_image" %></div>
-        </div>
-      </div>
-      <div class="result ResultF">
-        <div class="ResultF__recommend">あなたにぴったりなのは・・・・</div>
-        <div class="ResultF__Fmenu">
-          <div class="ResultF__Fmenu__text">イランイラン</div>
-          <div class="ResultF__Fmenu__detail">特徴的なその名前の由来はタガログ語で「花の中の花」意味します。エキゾチックな香りが特徴であり心を開放的にし幸せな気分に導く「フローラル・ハイ」と呼ばれる体験をもたらす。日常を離れた世界へトリップするような陶酔感を与えてくれるためアジアのスパなどで良く使われています。</div>
-          <div class="ResultF__Fmenu__image"><%= image_tag 'ilang-ilang.jpg' ,class: "recommend_image" %></div>
-        </div>
-      </div>
-      <div class="result ResultG">
-        <div class="ResultG__recommend">あなたにぴったりなのは・・・・</div>
-        <div class="ResultG__Gmenu">
-          <div class="ResultG__Gmenu__text">ジャスミン</div>
-          <div class="ResultG__Gmenu__detail">オリエンタルなお香をイメージさせるようなウッディで甘く深い香りがサンダルウッドの特徴です。日本では白檀という名前で知られ古代から高貴な香りとして重宝されてきました。心に静寂をもたらし静かな開放感を与えることから古代から瞑想や宗教の儀式に用いられてきました。近年ではマインドフルネスのブームに伴って注目されています。</div>
-           <div class="ResultG__Gmenu__image"><%= image_tag 'jasmine.jpg' ,class: "recommend_image" %></div>
-        </div>
-      </div>
-      <div class="result ResultH">
-        <div class="ResultH__recommend">あなたにぴったりなのは・・・・</div>
-        <div class="ResultH__Hmenu">
-          <div class="ResultH__Hmenu__text">シナモン</div>
-          <div class="ResultH__Hmenu__detail"></div>
-          <div class="ResultH__Hmenu__image"><%= image_tag 'cinnamon.jpg' ,class: "recommend_image" %></div>
-        </div>
-      </div>
-      <div class="result ResultI">
-        <div class="ResultI__recommend">あなたにぴったりなのは・・・・</div>
-        <div class="ResultI__Imenu">
-          <div class="ResultI__Imenu__text">ゆず</div>
-          <div class="ResultI__Imenu__image"><%= image_tag 'yuzu.jpg' ,class: "recommend_image" %></div>
-        </div>
-        <p>説明文</p>
-      </div>
-      <div class="result ResultJ">
-        <div class="ResultJ__recommend">あなたにぴったりなのは・・・・</div>
-        <div class="ResultJ__Jmenu">
-          <div class="ResultJ__Jmenu__text">フランキンセンス</<div>
-          <div class="ResultJ__Jmenu__image"><%= image_tag 'frankincense.jpg' ,class: "recommend_image" %></div>
-        </div>
-        <p>説明文</p>
-      </div>
-    
-  </div>
-  <hr class="my-3">
-    <div class='button-group'>
-      <%= link_to "トップページ", root_path, class:"btn btn-outline-primary btn-block" %>
     </div>
+
+    <div class="result ResultB">
+      <div class="ResultB__recommend">あなたにぴったりなのは・・・・</div>
+      <div class="ResultB__Bmenu">
+        <div class="ResultB__Bmenu__text">ローズマリー</div>
+        <div class="ResultB__Bmenu__detail">精神を高揚させる働きがあります。無気力や憂うつによく効きます。自分に自信がなく、強い自我に欠ける人が、自信をもち、自己実現に向けて行動できる強さを与えてくれます。考えすぎをなくし、自分の能力に自信が持てるようになります。ローズマリーは心臓の拍動を強める働きがあります。そのため、低血圧、手足の冷えに効果的です。脳の血流量を増やすので、集中力をアップさせます。筋肉の強壮にもつながり、筋肉痛やこりにも効きます。咳や気管支炎、去痰にも効果的です。また、肌への作用は、特に頭皮の不調改善に優れます。頭皮の血行を良くするので、抜け毛や育毛促進にいいと言われています。また、白髪やフケの悩みにも有効です。シャンプーに混ぜたり、オイルマッサージをお勧めします。</div>
+        <div class="ResultB__Bmenu__image"><%= image_tag 'rosemary.jpg' ,class: "recommend_image" %></div>
+        <%= render 'reload' %>
+      </div>
+    </div>
+
+    <div class="result ResultC">
+      <div class="ResultC__recommend">あなたにぴったりなのは・・・・</div>
+      <div class="ResultC__Cmenu">
+        <div class="ResultC__Cmenu__text">ゼラニウム</div>
+        <div class="ResultC__Cmenu__detail">ローズに非常に似た香りがありますがローズの精油ほど効果ではないため昔から香水の原料として親しまれていました。ゼラニウムの得意技は心身両面のバランスを取ること。体に対してはホルモンや消化液皮脂の分泌を調節します。女性にとっては生理前後の不快な症状を抑えるのに役立ちます。心に対する働きとしては、甘い香りが気分を明るくさせ不安を鎮める作用があります。最近では炎症を抑える効果があることが明らかになり、トリートメントでリウマチや関節炎に使われることが増えています。</div>
+        <div class="ResultC__Cmenu__image"><%= image_tag 'geranium.jpg' ,class: "recommend_image" %></div>
+        <%= render 'reload' %>
+      </div>
+    </div>
+    
+    <div class="result ResultD">
+      <div class="ResultD__recommend">あなたにぴったりなのは・・・・</div>
+      <div class="ResultD__Dmenu">
+        <div class="ResultD__Dmenu__text">スイートオレンジ</div>
+        <div class="ResultD__Dmenu__detail">年齢や性別問わず幅広く好まれ比較的シーンを選ばず利用できます。子供が眠れない時や落ち着いて何かに取り組みたい時などに芳香剤やオイルトリートメントでこの香りを使うと効果バツグンです。血行を良くして体を温める効果もあるため足浴にぴったり。腸の動きの促して食欲を増進させるなど消化器官全般にも良く働きかけてくれます。</div>
+        <div class="ResultD__Dmenu__image"><%= image_tag 'sweetorange.jpg' ,class: "recommend_image" %></div>
+        <%= render 'reload' %>
+      </div>
+    </div>
+      
+    <div class="result ResultE">
+      <div class="ResultE__recommend">あなたにぴったりなのは・・・・</div>
+      <div class="ResultE__Emenu">
+        <div class="ResultE__Emenu__text">ベルガモット</div>
+        <div class="ResultE__Emenu__detail">ベルガモットの香りは少し複雑でシトラス系の中では個性的な部類です。爽やかなリモネンの香りの中に少し甘いフローラルな香りがするのはラベンダーにも含まれる酢酸リナリルを含むためです。さらに繊細なスパイシーさも感じられるためリフレッシュとリラックスの両方の目的で使うことができます。不安な気持ちを和らげ自律神経の乱れからくる不眠にも優しく作用します。</div>
+        <div class="ResultE__Emenu__image"><%= image_tag 'bergamot.jpg' ,class: "recommend_image" %></div>
+        <%= render 'reload' %>
+      </div>
+    </div>
+
+    <div class="result ResultF">
+      <div class="ResultF__recommend">あなたにぴったりなのは・・・・</div>
+      <div class="ResultF__Fmenu">
+        <div class="ResultF__Fmenu__text">イランイラン</div>
+        <div class="ResultF__Fmenu__detail">特徴的なその名前の由来はタガログ語で「花の中の花」意味します。エキゾチックな香りが特徴であり心を開放的にし幸せな気分に導く「フローラル・ハイ」と呼ばれる体験をもたらす。日常を離れた世界へトリップするような陶酔感を与えてくれるためアジアのスパなどで良く使われています。イランイランは副交感神経を優位にし、血圧を下げる作用があります。そのため、高血圧やストレス性の不整脈、動悸の改善に効果が期待できます。実際に、イランイラン精油の吸引で、収縮期血圧の低下が認められたという研究報告もあります。</div>
+        <div class="ResultF__Fmenu__image"><%= image_tag 'ilang-ilang.jpg' ,class: "recommend_image" %></div>
+        <%= render 'reload' %>
+      </div>
+    </div>
+
+    <div class="result ResultG">
+      <div class="ResultG__recommend">あなたにぴったりなのは・・・・</div>
+      <div class="ResultG__Gmenu">
+        <div class="ResultG__Gmenu__text">カモミール</div>
+        <div class="ResultG__Gmenu__detail">カモミールはヨーロッパ原産のハーブ。カモミールローマンとカモミールジャーマンが有名ですが、どちらも30センチほどの草丈で、羽毛を思わせるような葉を持ち、可愛らしい白い花をつけます。カモミールローマンは多年草で、カモミールジャーマンは一年草という違いがあります。ハーブティーとしては、カモミールジャーマンの方が多く飲まれており、カモミールローマンのハーブティーには若干苦味があります。精油の香りは、カモミールローマンはややフルーティーで酸味があり、カモミールジャーマンは濃厚な甘さがあります。カモミールはラベンダーとともにリラックス効果の高い精油として知られています。不安や緊張を和らげたり、心を落ち着けて安らかな夜を迎えるために、カモミールの香りは大いに役立ってくれます。</div>
+          <div class="ResultG__Gmenu__image"><%= image_tag 'jasmine.jpg' ,class: "recommend_image" %></div>
+          <%= render 'reload' %>
+      </div>
+    </div>
+
+    <div class="result ResultH">
+      <div class="ResultH__recommend">あなたにぴったりなのは・・・・</div>
+      <div class="ResultH__Hmenu">
+        <div class="ResultH__Hmenu__text">シナモン</div>
+        <div class="ResultH__Hmenu__detail">気持ちを温めてくれる濃厚な香りのシナモンは中国では紀元前２７００年から記録が残っている歴史の古いハーブです。シナモンから作られたエッセンシャルオイルは、緊張をほぐして神経を落ち着かせ、心を元気づける作用や、体を温める作用があります。抗菌作用もあり、最近が心配な時や湿気の多い繁殖しやすい季節に散布するとその部屋は衛生的になります。</div>
+        <div class="ResultH__Hmenu__image"><%= image_tag 'cinnamon.jpg' ,class: "recommend_image" %></div>
+        <%= render 'reload' %>
+      </div>
+    </div>
+
+    <div class="result ResultI">
+      <div class="ResultI__recommend">あなたにぴったりなのは・・・・</div>
+      <div class="ResultI__Imenu">
+        <div class="ResultI__Imenu__text">ゆず</div>
+        <div class="ResultI__Imenu__detail">寒さに強い柚子は、寒い時期にも温かく見守って希望を与えてくれるような精油です。シトラスの香りは、希望やポジティブな考えを与えてくれます。不安に悩むときや決断できない時に背中を押してくれます。また、血行促進作用があります。疲労回復にも効果的なため、柚子湯は疲れをとり元気を取り戻すのに最適です。免疫活性や自律神経のバランスを整えたりもしてくれます。肌へはあまり使用されませんが、殺菌作用や保湿作用が期待できます。</div>
+        <div class="ResultI__Imenu__image"><%= image_tag 'yuzu.jpg' ,class: "recommend_image" %></div>
+        <%= render 'reload' %>
+      </div>
+    </div>
+
+    <div class="result ResultJ">
+      <div class="ResultJ__recommend">あなたにぴったりなのは・・・・</div>
+      <div class="ResultJ__Jmenu">
+        <div class="ResultJ__Jmenu__text">フランキンセンス</<div>
+        <div class="ResultJ__Jmenu__detail">中東が原産の常緑低木。10メートルくらいの高さにまで成長します。ソマリアやエチオピア、レバノンなどの乾燥した半砂漠地帯に育ちます。この木の樹皮に切れ込みを入れると、ミルクのような乳白色の樹液がにじみ出てきます。そのため、フランキンセンスは別名、乳香（にゅうこう）とも呼ばれます。薫香としても用いられるフランキンセンスは、リラックス効果が大変高い香りとして有名です。イライラとした心を鎮め、悲しい心をなぐさめ、心を穏やかにしてくれます。不安なときや何かの強迫観念に取りつかれている時も、心の落ち着きを取り戻させてくれます。</div>
+        <div class="ResultJ__Jmenu__image"><%= image_tag 'frankincense.jpg' ,class: "recommend_image" %></div>
+        <%= render 'reload' %>
+      </div>
+    </div>
+</div>
+      
+<hr class="my-3">
+  <div class='button-group'>
+    <%= link_to "トップページ", root_path, class:"btn btn-outline-primary btn-block" %>
+  </div>
