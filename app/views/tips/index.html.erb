@@ -1,9 +1,18 @@
 <%= stylesheet_link_tag 'tips', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-<div class="row">
+<div class='big-bg'>
+    <h2 class='page-title'>aroma tips</h2>
+    <p>生活に役立つアロマの豆知識を発信します</p>
+</div>
+
+<div class="content-entry">
+  <h2>Tips</h2>
+</div>
+
+<div class="row tips-group">
     <% @tips.each do |tip| %>
       <div class="col-12 col-md-6 col-lg-4 text-card-container">
-        <%= link_to tip, class: "card content-card border-dark mb-3 text-decoration-none", rel: "noopener noreferrer" do %>
+        <%= link_to tip, class: "card content-card border-dark text-decoration-none", rel: "noopener noreferrer" do %>
           <div class="card-header p-0">
             <%= image_tag tip.image.url, class: "card-img-top" %>
           </div>
@@ -13,4 +22,8 @@
         <% end %>
       </div>
     <% end %>
+</div>
+
+<div class='content-footer'>
+  <p>新しいコンテンツも追加予定です！</p>
 </div>
