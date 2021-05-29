@@ -8,7 +8,7 @@
 
 <div class="post_info">
     <div class="user_info">
-        <a href="/users/<%= @post.user.id %>">
+        <a href="/users/show/<%= @post.user.id %>">
         <% if @post.user.image? %>
             <img src=<%= @post.user.image %> class = "icon_image_side">
         <% else %>
