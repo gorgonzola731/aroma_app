@@ -1,20 +1,18 @@
 <nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color: #FFFAF0;">
-  <span class="navbar-brand">
-  <i class="fas fa-tint"></i>  
-  <%= link_to "aroma life", root_path, :style=>"color:black;" %></span>
+  <span class="navbar-brand font-weight-bold">
+    <i class="fas fa-tint"></i>  
+    <%= link_to "Aroma life", root_path, :style=>"color:black;" %>
+  </span>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <ul class = "nav navbar-nav">
   
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">  
     <div class="navbar-nav">
-
-
         <% if user_signed_in? %>
-          <%= link_to '投稿一覧へ', posts_path, class: "nav-item nav-link active"%>
-          <%= link_to "アカウント編集", edit_user_registration_path ,class: "nav-item nav-link active"%>
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" },class: "nav-item nav-link active" %>
+          <%= link_to "アカウント編集", edit_user_registration_path ,class: "nav-item nav-link active font-weight-bold"%>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" },class: "nav-item nav-link active font-weight-bold" %>
       <% else %>
           <%= link_to "ログイン", new_user_session_path,class: "nav-item nav-link active" %>
           <%= link_to "アカウント登録", new_user_registration_path,class: "nav-item nav-link active" %>

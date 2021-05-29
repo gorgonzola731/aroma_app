@@ -118,6 +118,7 @@ cursor: pointer;
 .card-title {
   font-family: 'Londrina Shadow', cursive;
   font-size: 30px;
+  letter-spacing: 0.1em;
 }
 
 .contents-entry {
@@ -153,3 +154,32 @@ cursor: pointer;
   border-bottom: 2px solid #DDDDDD	;
 }
 
+.site-title {
+  text-align: center;
+  h1 {
+    font-family: 'Londrina Shadow', cursive;
+    margin: 20px auto;
+    font-size: 60px;
+    position: relative;
+    display: inline-block;
+    padding: 0 55px;
+  }  
+
+}
+
+h1:before, h1:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 2px;
+  border:solid 1px black;
+}
+
+h1:before {
+  left:0;
+}
+h1:after {
+  right: 0;
+}
