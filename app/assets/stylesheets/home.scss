@@ -20,14 +20,14 @@
 
 /* --- 段差で背景画像のアニメーションを実行 ----------------- */
 .box .src1 {
-  background-image : url('geranium.jpg');   /* 背景の画像を指定 */
+  background-image : url('home-bg1.jpg');   /* 背景の画像を指定 */
 }
 .box .src2 {
-  background-image : url('lavender.jpg');   /* 背景の画像を指定 */
+  background-image : url('home-bg2.jpg');   /* 背景の画像を指定 */
   animation-delay  : 5s;
 }
 .box .src3 {
-  background-image : url('yuzu.jpg');   /* 背景の画像を指定 */
+  background-image : url('home-bg3.jpg');   /* 背景の画像を指定 */
   animation-delay  : 10s;
 }
 .box .src4 {
