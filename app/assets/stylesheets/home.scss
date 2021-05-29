@@ -1,0 +1,185 @@
+/* --- 全体のBOX定義 ---------------------------------------- */
+.box {
+  position   : relative;
+  height     : 600px;
+  width: 100%;
+  margin     : auto;
+  overflow   : hidden;
+}
+
+.box .bgImg {
+  position   : absolute;
+  top        : 0;
+  left       : 0;
+  bottom     : 0;
+  right      : 0;
+  opacity    : 0;
+  animation  : bgAnime 20s infinite;   /* 4画像 × 各5s = 20s */
+  background-size: cover;
+}
+
+/* --- 段差で背景画像のアニメーションを実行 ----------------- */
+.box .src1 {
+  background-image : url('geranium.jpg');   /* 背景の画像を指定 */
+}
+.box .src2 {
+  background-image : url('lavender.jpg');   /* 背景の画像を指定 */
+  animation-delay  : 5s;
+}
+.box .src3 {
+  background-image : url('yuzu.jpg');   /* 背景の画像を指定 */
+  animation-delay  : 10s;
+}
+.box .src4 {
+  background-image : url('rosemary.jpg');   /* 背景の画像を指定 */
+  animation-delay  : 15s;
+}
+
+@keyframes bgAnime {
+   0% { opacity: 0; transform: scale(1.4, 1.4); }
+   1% { opacity: 1; transform: scale(1.4, 1.4); }
+   5% { opacity: 1; transform: scale(1.4, 1.4); }
+  21% { opacity: 1; transform: scale(1.0, 1.0); }
+  25% { opacity: 1; transform: scale(1.0, 1.0); }
+  26% { opacity: 0; }
+ 100% { opacity: 0; }
+}
+
+/* --- 前面の文字定義（サンプルのため変更してください） ----- */
+.boxString{
+  position   : absolute;
+  width: 70%;
+  height: 40%;
+  padding    : 20px;
+  background : rgba(247,255,158,0.6);          /* 半透明の青 */
+  top        : 60%;                               /* 中央寄せ */
+  left       : 50%;
+  transform  : translate(-50%,-50%);
+  text-align: center;
+   p {
+     font-weight: bold;
+     font-size: 20px;
+   }
+}
+
+
+
+a span {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 3px solid #000;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 3px solid #000;
+  border-bottom: 3px solid #000;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+
+.base-container {
+  margin-top: 20px;
+}
+
+
+.card-container {
+  padding : 0;
+  margin: 0 80px 40px;
+  text-align: center;
+  font-weight: bold;
+  color: #000000;
+  border: #000000 solid 2px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0 0 6px 0 
+    rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
+}
+
+.card-container:hover {
+box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.5);
+transform: translateY(-5px);
+cursor: pointer;
+}
+
+.card-title {
+  font-family: 'Londrina Shadow', cursive;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+}
+
+.contents-entry {
+  margin: 30px auto;
+  font-weight: bold;
+  font-size: 45px;
+  font-family: 'Cabin Sketch', cursive;
+  letter-spacing: 2px;
+}
+
+.link-group {
+  width: 70%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.btn-home {
+  font-size: 30px;
+  width: 40%;
+  color: #000;
+  font-family: 'Cabin Sketch', cursive;
+  background-color: #FFFFFF;
+  border-bottom: 5px solid #DDDDDD;
+  border-radius: 10px;
+}
+
+.btn-home:hover {
+  text-decoration: none;
+  font-family: 'Cabin Sketch', cursive;
+  margin-top: 3px;
+  color: #000;
+  background: #FFFFFF;
+  border-bottom: 2px solid #DDDDDD	;
+}
+
+.site-title {
+  text-align: center;
+  h1 {
+    font-family: 'Londrina Shadow', cursive;
+    margin: 20px auto;
+    font-size: 60px;
+    position: relative;
+    display: inline-block;
+    padding: 0 55px;
+  }  
+
+}
+
+h1:before, h1:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 2px;
+  border:solid 1px black;
+}
+
+h1:before {
+  left:0;
+}
+h1:after {
+  right: 0;
+}
