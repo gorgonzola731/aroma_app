@@ -8,6 +8,7 @@
 
 <div class="post_info">
     <div class="user_info">
+        <a href="/users/show/<%= @post.user.id %>">
         <% if @post.user.image? %>
             <img src=<%= @post.user.image %> class = "icon_image_side">
         <% else %>
@@ -16,10 +17,12 @@
         <div class="user_name">
             <p><%= @user.name %></p>
         </div>
+        </a>
     </div>
+
     <div class='post_entry'>
         <h2 class="post_title"><%= @post.title %></h2>
-        <p>ジャンル【<%= @post.aroma %>】</p>
+        <p>香りのタイプ【<%= @post.aroma %>】</p>
     </div>
 </div>
 

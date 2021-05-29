@@ -159,7 +159,7 @@ aside {
 }
 
 .home-icon {
-  font-size: 20px;
+  font-size: 30px;
   color: #4453637c;
 }
 
@@ -235,6 +235,14 @@ a:hover{
   font-size: 25px;
 }
 
+.content-entry {
+  margin: 20px auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: 'Cabin Sketch', cursive;
+}
+
 .comment-create {
   text-align: center;
 }
@@ -266,9 +274,7 @@ a:hover{
   .comment-icon {
   width: 30px;
   height: 30px;
-  //サイズ指定
   border-radius: 15px;
-  //画像を丸くする
   object-fit: cover;
   }
 }
@@ -276,4 +282,53 @@ a:hover{
 .comment-counter {
   padding-left: 20px;
   font-weight: bold;
+}
+
+.tabs {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: 0 auto;}
+
+.tab_item {
+  width: calc(100%/2);
+  height: 50px;
+  border-bottom: 3px solid #5ab4bd;
+  background-color: #d9d9d9;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #565656;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.tab_item:hover {
+  opacity: 0.75;
+}
+
+input[name="tab_item"] {
+  display: none;
+}
+
+.tab_content {
+  display: none;
+  padding: 40px 40px 0;
+  clear: both;
+  overflow: hidden;
+}
+
+
+#all:checked ~ #all_content,
+#like:checked ~ #like_content {
+  display: block;
+}
+
+.tabs input:checked + .tab_item {
+  background-color: #5ab4bd;
+  color: #fff;
 }

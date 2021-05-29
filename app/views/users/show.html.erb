@@ -1,0 +1,110 @@
+<%= stylesheet_link_tag 'posts', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <div id="wrapper" class='big-bg'>
+    <div class="post-content ">
+      <h2 class='page-title'>everyone&apos;s aroma</h2>
+      <p>癒やしの時間をシェアしませんか?</p>
+    </div>
+  </div>
+
+  <div class="content-entry">
+    <p>articles list</p>
+  </div>
+
+  <div class="user_info mx-auto">
+    <% if @user.image? %>
+        <img src=<%= @user.image %> class = "icon_image_side">
+    <% else %>
+        <%= image_tag 'profile_default2.jpg' ,class: "icon_image_side" %>
+    <% end %>
+    <div class="user_name">
+        <p><%= @user.name %></p>
+    </div>
+  </div>
+
+
+
+<div class="tabs">
+  <input id="all" type="radio" name="tab_item" checked>
+  <label class="tab_item" for="all">投稿した記事</label>
+
+  <input id="like" type="radio" name="tab_item">
+  <label class="tab_item" for="like">いいねした記事</label>
+
+    <div class="tab_content" id="all_content">
+      <% @posts.each do |post| %>
+        <div class="card mb-1">
+          <%= link_to post do %>
+            <div class="card-body">
+                <div class="icon_space">
+                  <% if post.user.image? %>
+                    <img src=<%= post.user.image %> class = "icon_image">
+                    <% else %>
+                    <%= image_tag 'profile_default2.jpg' ,class: "icon_image" %>
+                  <% end %>
+                </div>
+                
+                <div class='text_space'>
+                    <p class='card-text'><%= post.title %></p>
+                    <p>【<%= post.aroma %>】</p>
+                    <p class='text_content'><%= post.content %></p>
+                </div>
+
+                <div class='thumbnail_space'>
+                  <div class="like_space">
+                    <i class="fas fa-heart home-icon"></i> <%= post.likes.count %>
+                  </div>
+                    <% if post.image? %>
+                        <%= image_tag post.image.thumb.url ,class: 'thumb-image'%>
+                      <% else %>
+                        <%= image_tag 'noimage.png',class: 'noimage' %>
+                    <% end %>
+                </div>
+            </div>
+          <% end %>
+            <span class="text-muted pl-2">
+              <i class='fas fa-clock home-icon'></i> <%= time_ago_in_words(post.created_at) %>前
+            </span>
+        </div>
+      <% end %>
+    </div>
+
+
+
+    <div class="tab_content" id="like_content">
+       <% @likes.each do |like| %>
+        <div class="card mb-1">
+          <%= link_to @post do %>
+            <div class="card-body">
+              <div class="icon_space">
+                    <% if like.post.user.image? %>
+                      <img src=<%= like.post.user.image %> class = "icon_image">
+                    <% else %>
+                      <%= image_tag 'profile_default2.jpg' ,class: "icon_image" %>
+                    <% end %>
+              </div>
+              <div class='text_space'>
+                    <p class='card-text'><%= like.post.title %></p>
+                    <p>【<%= like.post.aroma %>】</p>
+                    <p class='text_content'><%= like.post.content %></p>
+              </div>
+
+                <div class='thumbnail_space'>
+                  <div class="like_space">
+                    <i class="fas fa-heart home-icon"></i> <%= like.post.likes.count %>
+                  </div>
+
+                  <% if like.post.image? %>
+                      <%= image_tag like.post.image.thumb.url ,class: 'thumb-image'%>
+                    <% else %>
+                      <%= image_tag 'noimage.png',class: 'noimage' %>
+                  <% end %>
+                </div>
+            </div>
+          <% end %>
+            <span class="text-muted pl-2">
+              <i class='fas fa-clock home-icon'></i> <%= time_ago_in_words(like.post.created_at) %>前
+            </span>
+        </div>
+      <% end %>
+    </div>
+    
