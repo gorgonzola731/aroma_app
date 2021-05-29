@@ -19,34 +19,34 @@ $(document).on('turbolinks:load', function () {
       const max = Math.max(typeANum, typeBNum, typeCNum, typeDNum, typeENum, typeFNum, typeGNum, typeHNum, typeINum, typeJNum); 
       
       if (typeANum >= max) {
-        $(".ResultA").fadeIn();
+        $(".ResultA").fadeIn(1500);
         $("#wrapper").fadeOut();
       } else if (typeBNum >= max) {
-        $(".ResultB").fadeIn();
+        $(".ResultB").fadeIn(1500);
         $("#wrapper").fadeOut();
       } else if (typeCNum >= max) {
-        $(".ResultC").fadeIn();
+        $(".ResultC").fadeIn(1500);
         $("#wrapper").fadeOut();
       } else if (typeDNum >= max) {
-        $(".ResultD").fadeIn();
+        $(".ResultD").fadeIn(1500);
         $("#wrapper").fadeOut();
       } else if (typeENum >= max) {
-        $(".ResultE").fadeIn();
+        $(".ResultE").fadeIn(1500);
         $("#wrapper").fadeOut();
       } else if (typeFNum >= max) {
-        $("ResultF").fadeIn();
+        $("ResultF").fadeIn(1500);
         $("#wrapper").fadeOut();
       } else if (typeGNum >= max) {
-        $("ResultG").fadeIn();
+        $("ResultG").fadeIn(1500);
         $("#wrapper").fadeOut();
       } else if (typeHNum >= max) {
-        $("ResultH").fadeIn();
+        $("ResultH").fadeIn(1500);
         $("#wrapper").fadeOut();
       } else if (typeINum >= max) {
-        $("ResultI").fadeIn();
+        $("ResultI").fadeIn(1500);
         $("#wrapper").fadeOut();
       } else if (typeJNum >= max) {
-        $("ResultJ").fadeIn();
+        $("ResultJ").fadeIn(1500);
         $("#wrapper").fadeOut();
       }
     }
