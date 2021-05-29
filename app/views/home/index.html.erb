@@ -1,74 +1,66 @@
-<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4000">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://girlydrop.com/wp-content/uploads/post/p1242.jpg" class="d-block mx-auto w-100" alt="first"><div class="item1"></div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://girlydrop.com/wp-content/uploads/post/p6242.jpg" class="d-block mx-auto w-100" alt="second"><div class="item2"></div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://girlydrop.com/wp-content/uploads/post/p1345.jpg" class="d-block mx-auto w-100" alt="third"><div class="item3"></div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://girlydrop.com/wp-content/uploads/post/p4375.jpg" class="d-block mx-auto w-100" alt="fourth"><div class="item4"></div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+<%= stylesheet_link_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="box">
+  <div class="bgImg src1"></div>
+  <div class="bgImg src2"></div>
+  <div class="bgImg src3"></div>
+  <div class="bgImg src4"></div>
+  <div class="boxString">
+    <p>「アロマの癒しをストレスフルな日常に」</p>
+    <% if user_signed_in? %>
+    <p>植物の香りは私たちの心と身体にやさしく働きかけます。<br>アロマテラピーを知ることは、自分の心や身体と向き合うこと。正しい知識を得て<br>アロマテラピーを生活に取り入れてみませんか。</p>
+    <a href="#deck"><span></span></a>
+    <% else %>
+    <p>新規登録・ログインはこちらから</p>
+    <div class="link-group">
+    <%= link_to "sign up", new_user_registration_path, class:"btn-home" %>
+    <%= link_to "login", new_user_session_path, class:"btn-home" %>
     </div>
-
-
+    <% end %>
+  </div>
+</div>
     
-<!-- カード -->
-
 
 <div class="container text-center" id="works">
 <div class="card my-3">
-  <h3 class="card-header bg-dark text-white">About Aroma life</h3>
+  <h3 class="card-header bg-dark text-white">What's Aroma life？</h3>
   <div class="card-body">
-    <h4 class="card-title">ストレスを感じる日常にアロマの癒しはいかがですか？</h4>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    
+    <h4 class="card-explain">Aroma lifeはアロマがもっと好きになるポータルサイトです！</h4>
+    <p class="card-text">サウナってこんな楽しみ方もあるよ。こういうところに着目すると面白いよ。こんな施設があったよ。など、いろんな人のサウナ好き！な気持ちが集まって、皆のサウナライフがちょっぴり豊かに広がるようなサイトを目指しています。サウナの楽しみ方がたくさんの人に広がれば、友人・家族など、大切な人と一緒に過ごせるようなサウナがもっと生まれるかもしれない。自分だけのサウナが楽しめるような場所も増えるかもしれない。サウナとの関わり方の選択肢をもっと広げるような活動をしていきたいと考えています。</p>
   </div>
 </div>
-  <div class="card-deck">
-      <div class="card">
-      <a href="/diagnoses">
-        <img src="https://www.pakutaso.com/shared/img/thumb/susipaku583PAR54930_TP_V.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
+
+<div class="contents-entry"><p>main contents</p></div>
+
+<div class="deck-entry">
+  <div id="deck" class="card-deck">
+      <div class="card card-container bg-dark">
+      <%= link_to diagnoses_path, class:"text-decoration-none" do %>
+      <%= image_tag "finder-icon" ,class:"card-img-top" %>
+        <div class="card-body text-white">
           <h5 class="card-title">Aroma Finder</h5>
-          <p class="card-text">あなたにピッタリの香りを見つけてみませんか？</p>
+          <p class="card-text">質問に答えてあなたにピッタリのアロマを見つけましょう</p>
         </div>
-        </a>
+      <% end %>
       </div>
-      <div class="card">
-      <a href=/posts>
-        <img src="https://girlydrop.com/wp-content/uploads/post/p369.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
+
+      <div class="card card-container bg-dark">
+      <%= link_to posts_path, class:"text-decoration-none" do %>
+        <%= image_tag "sns-icon" ,class:"card-img-top" %>
+        <div class="card-body text-white">
           <h5 class="card-title">everyone&apos;s aroma</h5>
           <p class="card-text">あなたの癒しの時間をシェアしましょう</p>
         </div>
-        </a>
+        <% end %>
       </div>
-      <div class="card">
-      <a href="/tips">
-        <img src="https://www.pakutaso.com/shared/img/thumb/KAZDSCF2604_TP_V.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
+
+      <div class="card card-container bg-dark">
+      <%= link_to tips_path, class:"text-decoration-none" do %>
+      <%= image_tag "tips-icon" ,class:"card-img-top" %>
+        <div class="card-body text-white">
           <h5 class="card-title">Tips</h5>
-          <p class="card-text">アロマの効果的な使い方、豆知識を公開しています</p>
+          <p class="card-text">生活に役立つアロマの豆知識を発信します</p>
         </div>
-        </a>
+        <% end %>
       </div>
   </div>
