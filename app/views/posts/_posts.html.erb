@@ -1,5 +1,5 @@
 <% posts.each do |post| %>
-  <div class="card mb-1">
+  <div class="card mb-1" id="post-<%= post.id%>">
   <%= link_to post do %>
     <div class="card-body">
         <div class="icon_space">
@@ -18,6 +18,7 @@
 
         <div class='thumbnail_space'>
         <div class="like_space">
+          <i class="far fa-comment-dots home-icon"></i> <%= post.comments.count %>
           <i class="fas fa-heart home-icon"></i> <%= post.likes.count %>
         </div>
             <% if post.image? %>
@@ -28,8 +29,13 @@
         </div>
     </div>
     <% end %>
-    <span class="text-muted pl-2">
-      <i class='fas fa-clock home-icon'></i> <%= time_ago_in_words(post.created_at) %>前
-    </span>
+      <span class="text-muted pl-2 d-inline-flex">
+        <i class='fas fa-clock home-icon mr-1'></i> <%= time_ago_in_words(post.created_at) %>前
+        <% if post.user == current_user %>
+          <%= link_to post_path(post),class: 'text-danger', method: :delete, data: { confirm: '削除しますか?', remote: true } do %>
+            <i class="fas fa-trash home-icon ml-2"></i> 削除 
+          <% end %>
+        <% end %>
+      </span>
   </div>
 <% end %>

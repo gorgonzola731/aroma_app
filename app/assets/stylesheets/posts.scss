@@ -1,3 +1,4 @@
+
 .base-container {
   margin-top: 0;
 }
@@ -37,6 +38,12 @@
     margin: auto;
     padding: 10px 20px;
     cursor: pointer;
+}
+
+.card-body {
+  .text_space {
+    color: #000;
+  }
 }
 
 
@@ -159,7 +166,7 @@ aside {
 }
 
 .home-icon {
-  font-size: 30px;
+  font-size: 20px;
   color: #4453637c;
 }
 
@@ -212,9 +219,19 @@ a:hover{
 
 .user_info {
   text-align: center;
+  color: #000;
 .user_name {
-  margin-top: 20px;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 25px;
 }
+
+.user_name {
+  p {
+    color: #000;
+  }
+}
+
 }
 .post_info {
   margin-top: 40px;
@@ -321,7 +338,6 @@ input[name="tab_item"] {
   clear: both;
   overflow: hidden;
 }
-
 
 #all:checked ~ #all_content,
 #like:checked ~ #like_content {
