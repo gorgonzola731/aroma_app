@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: :index
+  before_action :set_message, only: %i[destroy]
 
   PER_PAGE = 5
 
@@ -35,13 +36,16 @@ class PostsController < ApplicationController
     post.update(post_params)
   end
   def destroy
-    post = Post.find(params[:id])
-    post.destroy
+    @post.destroy!
   end
 
   private
     def post_params
       params.require(:post).permit(:title, :content, :image, :aroma).merge(user_id: current_user.id)
+    end
+
+    def set_message
+      @post = Post.find(params[:id])
     end
 
 end
