@@ -54,6 +54,7 @@
 
                 <div class='thumbnail_space'>
                   <div class="like_space">
+                    <i class="far fa-comment-dots home-icon"></i> <%= like.post.comments.count %>
                     <i class="fas fa-heart home-icon"></i> <%= like.post.likes.count %>
                   </div>
 
@@ -65,8 +66,13 @@
                 </div>
             </div>
           <% end %>
-            <span class="text-muted pl-2">
-              <i class='fas fa-clock home-icon'></i> <%= time_ago_in_words(like.post.created_at) %>前
+            <span class="text-muted pl-2 d-inline-flex">
+              <i class='fas fa-clock home-icon mr-1'></i> <%= time_ago_in_words(like.post.created_at) %>前
+              <% if like.post.user == current_user %>
+                <%= link_to post_path(like.post),class: 'text-danger', method: :delete, data: { confirm: '削除しますか?', remote: true } do %>
+                  <i class="fas fa-trash home-icon ml-2"></i> 削除 
+                <% end %>
+              <% end %>
             </span>
         </div>
       <% end %>
