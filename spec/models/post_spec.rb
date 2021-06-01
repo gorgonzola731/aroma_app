@@ -6,6 +6,13 @@ RSpec.describe Post, type: :model do
   describe "バリデーションのチェック" do
     subject {post.valid?}
 
+    context "データが条件を満たすとき" do
+      let(:post) { build(:post) }
+      it "保存できる" do
+        expect(subject).to eq true
+      end
+    end
+
     context "titleが空のとき" do
       let(:post) { build(:post, title: "") }
       it "エラーが発生する" do
