@@ -28,7 +28,7 @@ module MarkdownHelper
   def html_renderer
     # ***** 以下を変更 *****
     ::Coderayify.new(
-      filter_html: true,
+      filter_html: false,
       hard_wrap: true,
       link_attributes: { rel: 'nofollow', target: "_blank" }
     )
