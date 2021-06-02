@@ -4,6 +4,13 @@
     <h2 class='page-title'>aroma tips</h2>
     <p>生活に役立つアロマの豆知識を発信します</p>
 </div>
+<div class="tip-container">
+    <h1 class="text-center">〜<%= @tip.title %>〜</h1>
+    <p><%= markdown(@tip.article) %></p> 
+</div>
 
-<h1><%= @tip.title %></h1>
-<p><%= markdown(@tip.article) %></p> 
+<hr class="my-3">
+  <div class='button-group'>
+    <%= link_to "記事一覧へ", tips_path, class:"btn btn-outline-primary btn-block" %>
+    <%= link_to "トップページへ", root_path, class:"btn btn-outline-primary btn-block" %>
+  </div>
