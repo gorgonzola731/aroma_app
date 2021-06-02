@@ -4,7 +4,7 @@
 }
 
 .full_image {
-  width: 100%;
+  width: 70%;
   max-height: 600px;
 }
 
@@ -248,8 +248,13 @@ a:hover{
   font-size: 35px;
   overflow-wrap: break-word;
 }
-.post_content {
-  font-size: 25px;
+.post-article {
+  text-align: center;
+  p {
+    font-size: 25px;
+    padding: 10px 200px;
+    overflow-wrap:  break-word;
+  }
 }
 
 .content-entry {
