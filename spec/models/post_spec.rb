@@ -38,6 +38,23 @@ RSpec.describe Post, type: :model do
       end
     end
 
+    context "titleが31字以上のとき" do
+      let(:post) { build(:post, title: "あ" * 31) }
+      it "エラーが発生する" do
+        expect(subject).to eq false
+        expect(post.errors.messages[:title]).to include "は30文字以内で入力してください"
+      end
+    end
+
+    context "aromaのが不正な値のとき" do
+      let(:post) { build(:post, aroma: "スモーキング" ) }
+      it "エラーが発生する" do
+        expect(subject).to eq false
+        expect(post.errors.messages[:aroma]).to include "は一覧にありません"
+      end
+    end
+    
+
     
   end
 end
