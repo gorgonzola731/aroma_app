@@ -3,43 +3,41 @@
     <%= comments.count %>件のコメント
   </div>
   
-  <% comments.each do |comment| %>
+<% comments.each do |comment| %>
       <div class="media">
-        <a href="#" class="mr-3">
-          <%# プロフィール画像 %>
-        </a>
         <div class="media-body">
-        <% unless comment.id.nil? %>
-        <div class="card mb-1">
-          <div class="comment-container">
-            <div class="comment-user">
-              <% if comment.user.image? %>
-                <img src=<%= comment.user.image %> class = "comment-icon">
-              <% else %>
-                <%= image_tag 'profile_default2.jpg' ,class: "comment-icon" %>
-            <% end %>
-              <p class='text-muted pl-2 pt-1 mb-1'><%=comment.user.name%></p>
-            </div>
-              
-              <div class="comment-content p-3">
-                <%= comment.content %>
-              </div>
-
-              <div class='comment_destroy'>
-                <% if comment.user == current_user %>
-                  <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true do %>
-                      <i class="fas fa-trash" style="color: black;"></i> 削除
+          <% unless comment.id.nil? %>
+            <div class="card mb-1">
+              <div class="comment-container">
+                <div class="comment-user">
+                  <% if comment.user.image? %>
+                    <img src=<%= comment.user.image %> class = "comment-icon">
+                  <% else %>
+                    <%= image_tag 'profile_default2.jpg' ,class: "comment-icon" %>
                   <% end %>
-                <% end %>
+                
+                  <p class='text-muted pl-2 pt-1 mb-1'><%=comment.user.name%></p>
+                </div>
+                
+                <div class="comment-content p-3">
+                  <%= comment.content %>
+                </div>
+                
+                <div class='comment_destroy'>
+                  <% if comment.user == current_user %>
+                    <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true do %>
+                      <i class="fas fa-trash" style="color: black;"></i> 削除
+                    <% end %>
+                  <% end %>
+                </div>
               </div>
-          </div>
-                <span class="comment-date pull-right">
-                  <i class='fas fa-clock home-icon'></i> <%= time_ago_in_words(comment.created_at) %>前
-                </span>
+              <span class="comment-date pull-right">
+                <i class='fas fa-clock home-icon'></i> <%= time_ago_in_words(comment.created_at) %>前
+              </span>
           </div>
         </div>
-        <% end %>
-        </div>
-      </div>
-  <% end %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
 
