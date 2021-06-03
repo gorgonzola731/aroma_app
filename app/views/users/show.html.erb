@@ -16,6 +16,7 @@
     <% else %>
         <%= image_tag 'profile_default2.jpg' ,class: "icon_image_side" %>
     <% end %>
+    
     <div class="user_name">
         <p><%= @user.name %></p>
     </div>
@@ -60,30 +61,30 @@
 
                   <% if like.post.image? %>
                       <%= image_tag like.post.image.thumb.url ,class: 'thumb-image'%>
-                    <% else %>
+                  <% else %>
                       <%= image_tag 'noimage.png',class: 'noimage' %>
                   <% end %>
                 </div>
             </div>
           <% end %>
-            <span class="text-muted pl-2 d-inline-flex">
-              <i class='fas fa-clock home-icon mr-1'></i> <%= time_ago_in_words(like.post.created_at) %>前
-              <% if like.post.user == current_user %>
-                <%= link_to post_path(like.post),class: 'text-danger', method: :delete, data: { confirm: '削除しますか?', remote: true } do %>
-                  <i class="fas fa-trash home-icon ml-2"></i> 削除 
+              <span class="text-muted pl-2 d-inline-flex">
+                <i class='fas fa-clock home-icon mr-1'></i> <%= time_ago_in_words(like.post.created_at) %>前
+                <% if like.post.user == current_user %>
+                  <%= link_to post_path(like.post),class: 'text-danger', method: :delete, data: { confirm: '削除しますか?', remote: true } do %>
+                    <i class="fas fa-trash home-icon ml-2"></i> 削除 
+                  <% end %>
                 <% end %>
-              <% end %>
-            </span>
-        </div>
-      <% end %>
+              </span>
+          </div>
+        <% end %>
+      </div>
     </div>
-  </div>
   
-  <hr class="my-3">
-  <div class=button-group>
-    <%= link_to "投稿一覧へ", posts_path, class:"btn btn-outline-primary btn-block" %>
-    <%= link_to "トップページへ", root_path, class:"btn btn-outline-primary btn-block" %>
-  </div> 
+    <hr class="my-3">
+    <div class=button-group>
+      <%= link_to "投稿一覧へ", posts_path, class:"btn btn-outline-primary btn-block" %>
+      <%= link_to "トップページへ", root_path, class:"btn btn-outline-primary btn-block" %>
+    </div> 
 
     
     

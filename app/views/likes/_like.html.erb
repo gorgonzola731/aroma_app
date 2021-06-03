@@ -3,7 +3,7 @@
   <% unless post.like_user(current_user.id).blank? %>
     <%= link_to post_like_path(post_id: post.id, id: post.likes[0].id), method: :delete, remote: true do %> 
       <div class="vertical_like">
-       <i class="fas fa-heart unlike-btn" ></i>
+        <i class="fas fa-heart unlike-btn" ></i>
       </div>
     <% end %>
     <p><%= post.likes.count %>件のいいね</p>

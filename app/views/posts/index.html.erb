@@ -1,16 +1,17 @@
 <%= stylesheet_link_tag 'posts', media: 'all', 'data-turbolinks-track': 'reload' %>
-<div id="wrapper" class='big-bg'>
-  <div class="post-content ">
-    <h2 class='page-title'>everyone&apos;s aroma</h2>
-    <p>癒やしの時間をシェアしませんか？</p>
+  <div id="wrapper" class='big-bg'>
+    <div class="post-content ">
+      <h2 class='page-title'>everyone&apos;s aroma</h2>
+      <p>癒やしの時間をシェアしませんか？</p>
+    </div>
   </div>
-</div>
 
-<div class="content-entry">
-  <p>Posts list</p>
-</div>
+  <div class="content-entry">
+    <p>Posts list</p>
+  </div>
 
 <div class="container mt-4">
+
   <div class='main-contents'>
     <div class="posts">
       <%= render 'posts', posts: @posts %>
@@ -20,13 +21,13 @@
       <%= render 'side-bar' %>
     </aside>
   </div>
+  
   <div class="modal-area">
     <button type="button" class="fixed_btn" data-toggle="modal" data-target="#exampleModal">
       <i class="far fa-comment-dots fa-2x"></i>  投稿する
     </button>
   </div>
 
-<!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -70,6 +71,7 @@
   </div>
 
   <hr class="my-3">
+  
   <div class=button-group>
       <%= link_to "トップページへ", root_path, class:"btn btn-outline-primary btn-block" %>
   </div>
