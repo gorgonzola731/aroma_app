@@ -51,6 +51,14 @@ RSpec.describe User, type: :model do
         expect(user.errors.messages[:email]).to include "は有効でありません。"
       end
     end
+
+    context "password が5文字以下のとき" do
+      let(:user) { build(:user, password: "a" * 5) }
+      it "エラーが発生する" do
+        expect(subject).to eq false
+        expect(user.errors.messages[:password]).to include "は6文字以上に設定して下さい。"
+      end
+    end
     
   end
 end
