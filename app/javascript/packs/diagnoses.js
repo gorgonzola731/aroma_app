@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load', function () {
-  $("button").on("click", function () {
+  $("#finder-btn").on("click", function () {
     $(".result").hide();
     var qNum = $("ul li").length;
     if ($("ul li input:checked").length < qNum) {
