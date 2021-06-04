@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: :index
   before_action :set_post, only: %i[destroy]
 
-  PER_PAGE = 5
+  PER_PAGE = 1
   Aroma_Rails = ["フローラル", "ハーバル", "ウッディ", "シトラス", "和の香り", "スパイシー", "エキゾチック", "その他"]
 
   def index
@@ -30,6 +30,8 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy!
+    @posts = Post.where(aroma: Aroma_Rails).order(created_at: :desc)
+    @posts = @posts.page(params[:page]).per(PER_PAGE)
   end
 
   private
