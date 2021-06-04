@@ -30,8 +30,15 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy!
+
     @posts = Post.where(aroma: Aroma_Rails).order(created_at: :desc)
     @posts = @posts.page(params[:page]).per(PER_PAGE)
+
+    @user = User.find_by(id: @post.user_id)
+    @my_posts = @user.posts.order(created_at: :desc)
+    @my_posts = @my_posts.page(params[:page]).per(PER_PAGE)
+
+    @like_posts = @user.like_posts.page(params[:page]).per(PER_PAGE)
   end
 
   private

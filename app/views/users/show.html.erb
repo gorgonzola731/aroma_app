@@ -24,20 +24,7 @@
 
 
 
-<div class="tabs">
-  <input id="all" type="radio" name="tab_item" checked>
-  <label class="tab_item" for="all">投稿した記事</label>
-
-  <input id="like" type="radio" name="tab_item">
-  <label class="tab_item" for="like">いいねした記事</label>
-
-    <div class="tab_content" id="all_content">
-      <%= render 'posts/posts' , posts: @posts %>
-    </div>
-
-    <div class="tab_content" id="like_content">
-      <%= render 'posts/posts' , posts: @like_posts %>
-    </div>
+  <%= render 'posts/tabs' %>
    
   
     <hr class="my-3">
