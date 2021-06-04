@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: :index
   before_action :set_post, only: %i[destroy]
 
-  PER_PAGE = 1
+  PER_PAGE = 5
   Aroma_Rails = ["フローラル", "ハーバル", "ウッディ", "シトラス", "和の香り", "スパイシー", "エキゾチック", "その他"]
 
   def index
