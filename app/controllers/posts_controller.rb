@@ -5,8 +5,7 @@ class PostsController < ApplicationController
   PER_PAGE = 5
 
   def index
-    aroma_rails = ["フローラル", "ハーバル", "ウッディ", "シトラス", "和の香り", "スパイシー", "エキゾチック", "その他"]
-    @posts = Post.where(aroma: aroma_rails).order(created_at: :desc)
+    @posts = Post.all.order(created_at: :desc)
     @posts = @posts.page(params[:page]).per(PER_PAGE)
     @post = Post.new
   end
@@ -24,11 +23,21 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create!(post_params)
-    @posts = Post.all.order(created_at: :desc) 
+    @posts = Post.all.order(created_at: :desc)
+    @posts = @posts.page(params[:page]).per(PER_PAGE)
   end
 
   def destroy
     @post.destroy!
+
+    @posts = Post.all.order(created_at: :desc)
+    @posts = @posts.page(params[:page]).per(PER_PAGE)
+
+    @user = User.find_by(id: @post.user_id)
+    @my_posts = @user.posts.order(created_at: :desc)
+    @my_posts = @my_posts.page(params[:page]).per(PER_PAGE)
+
+    @like_posts = @user.like_posts.page(params[:page]).per(PER_PAGE)
   end
 
   private

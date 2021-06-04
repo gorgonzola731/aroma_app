@@ -1,1 +1,3 @@
-document.getElementById('post-<%= @post.id %>').outerHTML = ''
+$('.posts').html("<%= escape_javascript(render 'posts', posts: @posts) %>")
+$('#all_content').html("<%= escape_javascript(render 'posts', posts: @my_posts) %>")
+$('#like_content').html("<%= escape_javascript(render 'posts', posts: @like_posts) %>")
