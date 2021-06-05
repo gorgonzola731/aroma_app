@@ -22,7 +22,7 @@
       
               <div class='comment_destroy'>
                 <% if comment.user == current_user %>
-                  <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true do %>
+                  <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete,data: { confirm: '削除しますか?', remote: true } do %>
                     <i class="fas fa-trash" style="color: black;"></i> 削除
                   <% end %>
                 <% end %>
