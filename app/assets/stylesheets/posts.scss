@@ -234,6 +234,9 @@ a:hover{
   display: flex;
   .post_entry {
     width: 80%;
+    p {
+      font-size: 18px;
+    }
   }
 }
 .user_info {
