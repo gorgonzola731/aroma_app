@@ -8,7 +8,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">新規投稿</h5>
+          <h5 class="modal-title font-weight-bold" id="exampleModalLabel">新規投稿</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -17,22 +17,22 @@
             
         
         <%= form_for @post, remote: true do |f| %>    
-          <div class="modal-body">
+          <div class="modal-body font-weight-bold">
             <div class="form-group">
               <%= f.label :title, "タイトル(30字以内)" %>
               <%= f.text_field :title, class:"form-control",required: true ,maxlength:"30" %>
             </div>
             
-            <div class="form-group">
+            <div class="form-group d-flex">
               <%= f.select :aroma, [["フローラル", "フローラル"], ["ハーバル", "ハーバル"], ["ウッディ", "ウッディ"],["シトラス", "シトラス"],["和の香り", "和の香り"],["スパイシー", "スパイシー"],["エキゾチック", "エキゾチック"],["その他", "その他"]],{ :include_blank => "選択(必須)▼" },:required => true, :id =>"aromaselector" %>
-              <div class="result">
-                <div id="フローラル" class="aromas フローラル">甘く華やかな香りが特徴の癒やし系</div>
-                <div id="ハーバル" class="aromas ハーバル"> 少し薬草の香りがするスッキリ系</div>
-                <div id="ウッディ" class="aromas ウッディ"> 森の中に来たような落ち着く香りの安定系</div>
-                <div id="シトラス" class="aromas シトラス"> 爽やかな香りが弾ける元気系</div>
-                <div id="和の香り" class="aromas 和の香り"> どこか懐かしい香りのするほっこり系</div>
-                <div id="スパイシー" class="aromas スパイシー"> インパクト強めで刺激的な個性系</div>
-                <div id="エキゾチック" class="aromas エキゾチック"> オリエンタルで個性的な官能系</div>
+              <div class="result ml-2 font-weight-bold">
+                <div id="フローラル" class="aromas フローラル">甘く華やかな香りが特徴の癒やし系です</div>
+                <div id="ハーバル" class="aromas ハーバル"> 少し薬草の香りがするスッキリ系です</div>
+                <div id="ウッディ" class="aromas ウッディ"> 森にも似た落ち着く香りの安定系です</div>
+                <div id="シトラス" class="aromas シトラス"> 爽やかな香りが弾ける元気系です</div>
+                <div id="和の香り" class="aromas 和の香り"> どこか懐かしい香りのするほっこり系です</div>
+                <div id="スパイシー" class="aromas スパイシー"> インパクト強めで刺激的な個性系です</div>
+                <div id="エキゾチック" class="aromas エキゾチック"> オリエンタルで個性的な官能系です</div>
               </div>
             </div>
 
