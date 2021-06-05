@@ -22,7 +22,7 @@
 
     <div class='post_entry'>
         <h2 class="post_title"><%= @post.title %></h2>
-        <p>香りのタイプ【<%= @post.aroma %>】</p>
+        <p class='<%= translation_class_name(@post.aroma) %> badge badge-pill'><%= @post.aroma %></p>
     </div>
 </div>
 

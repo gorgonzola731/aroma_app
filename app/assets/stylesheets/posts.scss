@@ -234,6 +234,9 @@ a:hover{
   display: flex;
   .post_entry {
     width: 80%;
+    p {
+      font-size: 18px;
+    }
   }
 }
 .user_info {
@@ -352,4 +355,29 @@ input[name="tab_item"] {
 
 .form-content {
   min-height: 300px;
+}
+
+.floral{
+  background-color: #FFCCFF;
+}
+.citrus {
+  background-color: #FFFF99;
+}
+.herbal{
+  background-color: #AEFFBD;
+}
+.woody{
+  background-color: #FFAD90;
+}
+.spicy{
+  background-color: #DB7093;
+}
+.japanese{
+  background-color: #66CDAA;
+}
+.exotic{
+  background-color: #D0B0FF;
+}
+.other{
+  background-color: #DCDCDC;
 }
