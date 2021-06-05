@@ -1,9 +1,9 @@
 <%= stylesheet_link_tag 'posts', media: 'all', 'data-turbolinks-track': 'reload' %>
     <div id="wrapper" class='big-bg'>
-    <div class="post-content ">
-        <h2 class='page-title'>everyone&apos;s aroma</h2>
-        <p>癒やしの時間をシェアしませんか?</p>
-    </div>
+        <div class="post-content ">
+            <h2 class='page-title'>everyone&apos;s aroma</h2>
+            <p>癒やしの時間をシェアしませんか?</p>
+        </div>
     </div>
 
 <div class="post_info">
@@ -24,6 +24,7 @@
         <h2 class="post_title"><%= @post.title %></h2>
         <p class='<%= translation_class_name(@post.aroma) %> badge badge-pill'><%= @post.aroma %></p>
     </div>
+
 </div>
 
     <div class="post-article">
