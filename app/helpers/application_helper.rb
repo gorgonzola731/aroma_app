@@ -45,6 +45,26 @@ module ApplicationHelper
     markdown.render(text).html_safe
   end
 
+  def translation_class_name(aroma)
+    if aroma == "フローラル"
+      aroma.gsub(aroma,"floral")
+    elsif aroma == "ハーバル"
+      aroma.gsub(aroma,"herbal")
+    elsif aroma == "ウッディ"
+      aroma.gsub(aroma,"woody")
+    elsif aroma == "シトラス"
+      aroma.gsub(aroma,"citrus")
+    elsif aroma == "スパイシー"
+      aroma.gsub(aroma,"spicy")
+    elsif aroma == "和の香り"
+      aroma.gsub(aroma,"japanese")
+    elsif aroma == "エキゾチック"
+      aroma.gsub(aroma,"exotic")
+    elsif aroma == "その他"
+      aroma.gsub(aroma,"other")
+    end
+  end
+
 
   def max_width
     if devise_controller?
