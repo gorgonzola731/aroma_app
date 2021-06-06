@@ -63,21 +63,23 @@ ul {
   height: 850px;
 }
 
-.btn-border {
-  border: 2px solid #000;
-  border-radius: 0;
-  background: #fff;
+.btn-radius-solid {
+  background: #f1e767;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f1e767), to(#feb645));
+  background: -webkit-linear-gradient(top, #f1e767 0%, #feb645 100%);
+  background: linear-gradient(to bottom, #f1e767 0%, #feb645 100%);
   font-family: 'Londrina Shadow', cursive;
-  font-size: 25px;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  font-weight: bold;
 }
 
-.btn-border:hover {
-  border: 2px solid #000;
-  border-radius: 0;
-  background: #FFFFCC;
-  font-family: 'Londrina Shadow', cursive;
-  font-size: 25px;
-  letter-spacing: 0.1em;
+.btn-radius-solid:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f1e767), to(#feb645));
+  background: -webkit-linear-gradient(bottom, #f1e767 0%, #feb645 100%);
+  background: linear-gradient(to top, #f1e767 0%, #feb645 100%);
+  letter-spacing: 0.2em;
+  font-weight: bold;
 }
 
 .result {
@@ -147,4 +149,10 @@ ul {
   margin: 10px 0 0;
   text-align: center;
   color: #111111;
+}
+
+.textBox {
+  span {
+    font-weight: bold;
+  }
 }
