@@ -2,7 +2,7 @@
 lock "~> 3.16.0"
 
 set :application, "aroma_app"
-set :repo_url, "https://github.com/gorgonzola731/aroma_app"
+set :repo_url, "git@github.com:gorgonzola731/aroma_app.git"
 set :rbenv_ruby, File.read('.ruby-version').strip
 set :branch, ENV['BRANCH'] || "master"
 # Default branch is :master
