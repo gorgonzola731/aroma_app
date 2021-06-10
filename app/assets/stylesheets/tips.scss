@@ -67,3 +67,17 @@
 .tip-container {
   margin: 80px auto;
 }
+
+// スマホ対応
+@media screen and (max-width:950px) {
+img {
+  width: 100%;
+}
+
+.big-bg p{
+  display: none;
+}
+
+
+
+}
