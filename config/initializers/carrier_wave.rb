@@ -7,5 +7,6 @@ if Rails.env.production?
       region: "ap-northeast-1"
     }
     config.fog_directory = "aroma-app-pbuckert"
+    config.asset_host = "https://static.aromalife-app.com"
   end
 end
