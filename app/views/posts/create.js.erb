@@ -2,4 +2,5 @@ $("textarea").val("");
 $("input").val("");
 $("select").val("");
 $('#exampleModal').modal('hide')
+$('.result').hide();
 $('.posts').html("<%= escape_javascript(render 'posts', posts: @posts) %>")
