@@ -135,20 +135,29 @@ cursor: pointer;
 .btn-home {
   font-size: 30px;
   width: 40%;
+  font-family: 'Londrina Shadow', cursive;;
+  letter-spacing: 0.1rem;
   color: #000;
-  font-family: 'Cabin Sketch', cursive;
-  background-color: #FFFFFF;
-  border-bottom: 5px solid #DDDDDD;
-  border-radius: 10px;
+  border: 3px solid #fff;
+  border-radius: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#b2c538), to(#fee140));
+  background-image: -webkit-linear-gradient(left, #b2c538 0%, #fee140 100%);
+  background-image: linear-gradient(to right, #b2c538 0%, #fee140 100%);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
 }
 
+
+
 .btn-home:hover {
+  letter-spacing: 0.1rem;
   text-decoration: none;
-  font-family: 'Cabin Sketch', cursive;
-  margin-top: 3px;
   color: #000;
-  background: #FFFFFF;
-  border-bottom: 2px solid #DDDDDD	;
+  -webkit-transform: translate(0, -3px);
+  transform: translate(0, -3px);
+  -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, .2);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .2);
+
 }
 
 .site-title {
