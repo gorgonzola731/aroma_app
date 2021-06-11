@@ -1,5 +1,4 @@
 ActiveAdmin.register User do
-
   permit_params :name, :email, :password, :password_confirmation
 
   index do
@@ -28,5 +27,4 @@ ActiveAdmin.register User do
     end
     f.actions
   end
-
 end

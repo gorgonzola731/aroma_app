@@ -1,9 +1,8 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe User, type: :model do
-
   describe "バリデーションのチェック" do
-    subject {user.valid?}
+    subject { user.valid? }
 
     context "データが条件を満たすとき" do
       let(:user) { build(:user) }
@@ -37,7 +36,7 @@ RSpec.describe User, type: :model do
 
     context "emailがすでに存在する時は無効である" do
       before { create(:user, email: "test@email.com") }
-      let (:user) { build(:user, email: "test@email.com")}
+      let(:user) { build(:user, email: "test@email.com") }
       it "エラーが発生する" do
         expect(subject).to eq false
         expect(user.errors.messages[:email]).to include "は既に使用されています。"
@@ -59,6 +58,5 @@ RSpec.describe User, type: :model do
         expect(user.errors.messages[:password]).to include "は6文字以上に設定して下さい。"
       end
     end
-    
   end
 end

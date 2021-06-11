@@ -1,8 +1,8 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Tip, type: :model do
   describe "バリデーションのチェック" do
-    subject {tip.valid?}
+    subject { tip.valid? }
 
     context "データが条件を満たすとき" do
       let(:tip) { build(:tip) }
@@ -10,7 +10,7 @@ RSpec.describe Tip, type: :model do
         expect(subject).to eq true
       end
     end
-    
+
     context "titleが空のとき" do
       let(:tip) { build(:tip, title: "") }
       it "エラーが発生する" do
@@ -18,7 +18,6 @@ RSpec.describe Tip, type: :model do
         expect(tip.errors.messages[:title]).to include "を入力してください"
       end
     end
-
 
     context "articleが空のとき" do
       let(:tip) { build(:tip, article: "") }

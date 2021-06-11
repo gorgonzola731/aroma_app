@@ -30,7 +30,7 @@ module MarkdownHelper
     ::Coderayify.new(
       filter_html: false,
       hard_wrap: true,
-      link_attributes: { rel: 'nofollow', target: "_blank" }
+      link_attributes: { rel: "nofollow", target: "_blank" }
     )
   end
 end

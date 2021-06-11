@@ -3,8 +3,8 @@ lock "~> 3.16.0"
 
 set :application, "aroma_app"
 set :repo_url, "git@github.com:gorgonzola731/aroma_app.git"
-set :rbenv_ruby, File.read('.ruby-version').strip
-set :branch, ENV['BRANCH'] || "master"
+set :rbenv_ruby, File.read(".ruby-version").strip
+set :branch, ENV["BRANCH"] || "master"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 set :nginx_config_name, "#{fetch(:application)}.conf"
@@ -24,7 +24,7 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "node_module
 # set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
 
 # Default value for :pty is false
-#set :pty, true
+# set :pty, true
 
 # Default value for :linked_files is []
 # append :linked_files, "config/database.yml"

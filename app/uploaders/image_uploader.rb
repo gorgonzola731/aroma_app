@@ -3,29 +3,28 @@ class ImageUploader < CarrierWave::Uploader::Base
   version :thumb do
     process resize_to_fit: [200, 200]
   end
-  
+
   if Rails.env.production?
     storage :fog
   else
     storage :file
   end
- 
+
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
   def extension_whitelist
-    %w(jpg jpeg gif png)
+    %w[jpg jpeg gif png]
   end
 
   def size_range
     0..5.megabytes
   end
-  
+
   def filename
     "#{secure_token}.#{file.extension}" if original_filename.present?
   end
-
 
   protected
 
