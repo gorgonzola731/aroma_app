@@ -7,7 +7,11 @@ module MarkdownHelper
   private
 
   def html_renderer
-    Redcarpet::Render::HTML
+    ::Coderayify.new(
+      filter_html: false,
+      hard_wrap: true,
+      link_attributes: { rel: "nofollow", target: "_blank" }
+    )
   end
 
   def markdown_extensions
@@ -23,14 +27,5 @@ module MarkdownHelper
       lax_html_blocks: true,
       strikethrough: true
     }
-  end
-
-  def html_renderer
-    # ***** 以下を変更 *****
-    ::Coderayify.new(
-      filter_html: false,
-      hard_wrap: true,
-      link_attributes: { rel: 'nofollow', target: "_blank" }
-    )
   end
 end

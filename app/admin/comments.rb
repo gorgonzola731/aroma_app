@@ -1,5 +1,4 @@
-ActiveAdmin.register Comment, :as => "PostComment" do
-
+ActiveAdmin.register Comment, as: "PostComment" do
   permit_params :user_id, :post_id, :content
 
   index do
@@ -10,5 +9,4 @@ ActiveAdmin.register Comment, :as => "PostComment" do
     column :content
     actions
   end
-
 end

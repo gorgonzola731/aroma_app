@@ -8,7 +8,8 @@ class TipsController < ApplicationController
   end
 
   private
-    def tip_params
-      params.require(:tip).permit(:title, :article, :image)
-    end
+
+  def tip_params
+    params.require(:tip).permit(:title, :article, :image)
+  end
 end

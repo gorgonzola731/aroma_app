@@ -23,10 +23,10 @@ class Coderayify < Redcarpet::Render::HTML
       "md"
     elsif language.include?(":")
       # コードブロックの開始宣言が「```rb:sample.rb」の場合は rb 形式とみなす
-      language.split(':')[0]
+      language.split(":")[0]
     elsif language.include?(".")
       # コードブロックの開始宣言が「```sample.rb」の場合は rb 形式とみなす
-      language.split('.')[-1]
+      language.split(".")[-1]
     else
       language
     end

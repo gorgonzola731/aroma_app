@@ -14,13 +14,13 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   def liked_by?(post_id)
-  likes.where(post_id: post_id).exists?
+    likes.exists?(post_id: post_id)
   end
 
   def self.guest
-    find_or_create_by!(name:' guest_user',email: 'guest@example.com') do |user|
-    user.password = SecureRandom.urlsafe_base64
-    # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
+    find_or_create_by!(name: " guest_user", email: "guest@example.com") do |user|
+      user.password = SecureRandom.urlsafe_base64
+      # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
     end
   end
 end

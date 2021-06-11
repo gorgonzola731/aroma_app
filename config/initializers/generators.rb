@@ -10,4 +10,4 @@ Rails.application.config.generators do |g|
                    helper_specs: false,
                    controller_specs: false,
                    request_specs: true
-end 
+end

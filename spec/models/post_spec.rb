@@ -1,10 +1,8 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Post, type: :model do
-  
-
   describe "バリデーションのチェック" do
-    subject {post.valid?}
+    subject { post.valid? }
 
     context "データが条件を満たすとき" do
       let(:post) { build(:post) }
@@ -20,7 +18,6 @@ RSpec.describe Post, type: :model do
         expect(post.errors.messages[:title]).to include "を入力してください"
       end
     end
-
 
     context "contentが空のとき" do
       let(:post) { build(:post, content: "") }
@@ -47,14 +44,11 @@ RSpec.describe Post, type: :model do
     end
 
     context "aromaのが不正な値のとき" do
-      let(:post) { build(:post, aroma: "スモーキング" ) }
+      let(:post) { build(:post, aroma: "スモーキング") }
       it "エラーが発生する" do
         expect(subject).to eq false
         expect(post.errors.messages[:aroma]).to include "は一覧にありません"
       end
     end
-    
-
-    
   end
 end
