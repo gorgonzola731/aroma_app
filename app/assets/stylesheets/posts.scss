@@ -8,12 +8,10 @@
 
 .like_to_post {
   position: relative;
-  background: #FFFAF0;
   z-index: 3;
   text-align: center;
   margin-bottom: 30px;
   padding: 20px 0;
-  margin: 30px 200px;
 }
 
 .like_lead {
@@ -28,7 +26,6 @@
     background: #FFFAF0;
     display: block;
     box-sizing: border-box;
-    font-weight: 700;
     color: #111;
     text-align: center;
     text-decoration: none;
@@ -384,6 +381,7 @@ input[name="tab_item"] {
 
 // スマホ対応
 @media screen and (max-width:950px) {
+  // 投稿一覧
   .container {
     padding: 0;
   }
@@ -395,26 +393,35 @@ input[name="tab_item"] {
 
   aside {
     width: 100%;
-    .panel {
-      margin: 60px 0;
-    }
+  }
+
+  .panel {
+    margin: 60px 0;
   }
 
   .posts {
     width: 100%;
+  }
+
   .card-body {
     padding: 20px 0 0 0;
-    .thumbnail_space {
-      display: none;
-    }
   }
-    .card-text  {
-      font-size: 20px;
+
+  .thumbnail_space {
+    display: none;
+  }
+
+  .text_space {
+    .card-text {
+    margin: 0;
+    white-space: normal;
+    font-size: 15px;
     }
+  }  
+
     .text_content {
       display: none;
     }
-  }
     .icons {
       margin-left: auto;
       padding-right: 15px;
@@ -428,7 +435,16 @@ input[name="tab_item"] {
       min-height: 200px;
     }
 
-    .post-content .page-title {
+    #all_content {
+      padding: 0;
+    }
+
+    .user_info {
+      width: 100%;
+    }
+
+    // 投稿詳細
+    .post_entry .page-title {
       padding-top: 40px;
     }
 
@@ -455,5 +471,12 @@ input[name="tab_item"] {
         overflow-wrap: normal;
       }
     } 
+
+    .comment_destroy {
+      padding-right: 0;
+    }
+
+
+    
     
 }
