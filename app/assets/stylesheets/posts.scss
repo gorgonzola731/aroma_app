@@ -1,8 +1,6 @@
-
 .base-container {
   margin-top: 0;
 }
-
 .full_image {
   width: 70%;
   max-height: 600px;
@@ -10,12 +8,10 @@
 
 .like_to_post {
   position: relative;
-  background: #FFFAF0;
   z-index: 3;
   text-align: center;
   margin-bottom: 30px;
   padding: 20px 0;
-  margin: 30px 200px;
 }
 
 .like_lead {
@@ -30,7 +26,6 @@
     background: #FFFAF0;
     display: block;
     box-sizing: border-box;
-    font-weight: 700;
     color: #111;
     text-align: center;
     text-decoration: none;
@@ -357,6 +352,8 @@ input[name="tab_item"] {
   min-height: 300px;
 }
 
+
+// 色分けのヘルパーメソッド用
 .floral{
   background-color: #FFCCFF;
 }
@@ -380,4 +377,106 @@ input[name="tab_item"] {
 }
 .other{
   background-color: #DCDCDC;
+}
+
+// スマホ対応
+@media screen and (max-width:950px) {
+  // 投稿一覧
+  .container {
+    padding: 0;
+  }
+
+  .main-contents {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  .panel {
+    margin: 60px 0;
+  }
+
+  .posts {
+    width: 100%;
+  }
+
+  .card-body {
+    padding: 20px 0 0 0;
+  }
+
+  .thumbnail_space {
+    display: none;
+  }
+
+  .text_space {
+    .card-text {
+    margin: 0;
+    white-space: normal;
+    font-size: 15px;
+    }
+  }  
+
+    .text_content {
+      display: none;
+    }
+    .icons {
+      margin-left: auto;
+      padding-right: 15px;
+      font-size: small;
+    }
+    .icon_image {
+      width: 40px;
+      height: 40px;
+    }
+    .form-content {
+      min-height: 200px;
+    }
+
+    #all_content {
+      padding: 0;
+    }
+
+    .user_info {
+      width: 100%;
+    }
+
+    // 投稿詳細
+    .post_entry .page-title {
+      padding-top: 40px;
+    }
+
+    .post-content p {
+      display: none;
+    }
+
+    .post_info {
+      flex-direction: column;
+      .user_info {
+        width: 100%;
+      }
+      .post_entry {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .post-article {
+      text-align: center;
+      p {
+        font-size: 25px;
+        padding: 0;
+        overflow-wrap: normal;
+      }
+    } 
+
+    .comment_destroy {
+      padding-right: 0;
+    }
+
+
+    
+    
 }

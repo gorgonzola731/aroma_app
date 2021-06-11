@@ -156,3 +156,31 @@ ul {
     font-weight: bold;
   }
 }
+
+// スマホ対応
+@media screen and (max-width:950px) {
+
+  .big-bg p{
+    display: none;
+  }
+
+  .result .recommend_image {
+    width: 95%;
+  }
+
+  #wrapper .questions {
+    height: 80%;
+    width: 95%;
+    font-size: 15px;
+    line-height: 1.3rem;
+  }
+
+  .result {
+    margin: 20px 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 950px){
+  .br-sp {display: none; }
+  }

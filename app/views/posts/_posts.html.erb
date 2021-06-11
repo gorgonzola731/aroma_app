@@ -30,7 +30,7 @@
       </div>
     <% end %>
       
-    <span class="text-muted pl-2 d-inline-flex">
+    <span class="text-muted pl-2 d-inline-flex icons">
       <i class='fas fa-clock home-icon mr-1'></i> <%= time_ago_in_words(post.created_at) %>前
       <% if post.user == current_user %>
         <%= link_to post_path(post),class: 'text-danger', method: :delete, data: { confirm: '削除しますか?', remote: true } do %>
