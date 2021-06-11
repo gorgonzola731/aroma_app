@@ -1,101 +1,104 @@
 <%= stylesheet_link_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <div class="site-title">
-    <h1>Aroma life</h1>
+<div class="site-title">
+  <h1>Aroma life</h1>
+</div>
+
+<div class="box">
+  <div class="bgImg src1"></div>
+  <div class="bgImg src2"></div>
+  <div class="bgImg src3"></div>
+  <div class="bgImg src4"></div>
+  <div class="boxString">
+    <p>「アロマの癒しをストレスのある日常に」</p>
+    <% if user_signed_in? %>
+    <p>植物の香りは私たちの心と身体にやさしく働きかけます。<br>アロマテラピーを知ることは、自分の心や身体と向き合うこと。<br>正しい知識を得てアロマテラピーを生活に取り入れてみませんか。</p>
+    <a href="#deck"><span></span></a>
+    <% else %>
+    <p>新規登録・ログインはこちらから</p>
+    <div class="link-group">
+      <%= link_to "sign up", new_user_registration_path, class:"btn-home" %>
+      <%= link_to "log in", new_user_session_path, class:"btn-home" %>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+
+<div class="container text-center" id="works">
+  <div class="card my-3">
+    <h3 class="card-header bg-dark text-white">About Aroma life</h3>
+    <div class="card-body">
+      <h4 class="card-explain">Aroma lifeはアロマがもっと好きになるポータルサイトです！</h4>
+      <p class="card-text">
+        花の香り。フルーツの香り。森の香り。植物の香りは、私たちの心や身体にさまざまに働きかけます。アロマテラピーは、植物から抽出した香り成分である精油（エッセンシャルオイル）を使って、心身のトラブルを穏やかに回復し、健康や美容に役立てていく自然療法です。<br>Aroma
+        lifeではアロマテラピーの楽しみ方、香りのバリエーションなど、いろいろな方の香りが好き！な気持ちが集めて<br>皆のアロマライフがちょっぴり豊かに広がるようなサイトを目指しています。あなたのお好みの香りを探したり<br>アロマの効果的な使い方を知って普段の生活にお役立てください。
+      </p>
+    </div>
   </div>
 
-  <div class="box">
-    <div class="bgImg src1"></div>
-    <div class="bgImg src2"></div>
-    <div class="bgImg src3"></div>
-    <div class="bgImg src4"></div>
-      <div class="boxString">
-        <p>「アロマの癒しをストレスのある日常に」</p>
+  <div class="contents-entry">
+    <p>Main Contents</p>
+  </div>
+
+  <div class="deck-entry">
+    <div id="deck" class="card-deck">
+      <div class="card card-container bg-dark">
         <% if user_signed_in? %>
-          <p>植物の香りは私たちの心と身体にやさしく働きかけます。<br>アロマテラピーを知ることは、自分の心や身体と向き合うこと。<br>正しい知識を得てアロマテラピーを生活に取り入れてみませんか。</p>
-          <a href="#deck"><span></span></a>
+        <%= link_to diagnoses_path, class:"text-decoration-none" do %>
+        <%= image_tag "finder-icon" ,class:"card-img-top" %>
+        <div class="card-body text-white">
+          <h5 class="card-title">Aroma Finder</h5>
+          <p class="card-text">質問に答えてあなたにピッタリのアロマを見つけましょう</p>
+        </div>
+        <% end %>
         <% else %>
-          <p>新規登録・ログインはこちらから</p>
-          <div class="link-group">
-          <%= link_to "sign up", new_user_registration_path, class:"btn-home" %>
-          <%= link_to "log in", new_user_session_path, class:"btn-home" %>
-          </div>
+        <%= link_to new_user_session_path, class:"text-decoration-none" do %>
+        <%= image_tag "finder-icon" ,class:"card-img-top" %>
+        <div class="card-body text-white">
+          <h5 class="card-title">Aroma Finder</h5>
+          <p class="card-text">質問に答えてあなたにピッタリのアロマを見つけましょう</p>
+        </div>
+        <% end %>
         <% end %>
       </div>
-  </div>
-    
 
-  <div class="container text-center" id="works">
-    <div class="card my-3">
-      <h3 class="card-header bg-dark text-white">About Aroma life</h3>
-        <div class="card-body">
-          <h4 class="card-explain">Aroma lifeはアロマがもっと好きになるポータルサイトです！</h4>
-          <p class="card-text">花の香り。フルーツの香り。森の香り。植物の香りは、私たちの心や身体にさまざまに働きかけます。アロマテラピーは、植物から抽出した香り成分である精油（エッセンシャルオイル）を使って、心身のトラブルを穏やかに回復し、健康や美容に役立てていく自然療法です。<br>Aroma lifeではアロマテラピーの楽しみ方、香りのバリエーションなど、いろいろな方の香りが好き！な気持ちが集めて<br>皆のアロマライフがちょっぴり豊かに広がるようなサイトを目指しています。あなたのお好みの香りを探したり<br>アロマの効果的な使い方を知って普段の生活にお役立てください。</p>
+      <div class="card card-container bg-dark">
+        <% if user_signed_in? %>
+        <%= link_to posts_path, class:"text-decoration-none" do %>
+        <%= image_tag "sns-icon" ,class:"card-img-top" %>
+        <div class="card-body text-white">
+          <h5 class="card-title">Everyone&apos;s Aroma</h5>
+          <p class="card-text">あなたの癒しの時間をシェアしましょう</p>
         </div>
+        <% end %>
+        <% else %>
+        <%= link_to new_user_session_path, class:"text-decoration-none" do %>
+        <%= image_tag "sns-icon" ,class:"card-img-top" %>
+        <div class="card-body text-white">
+          <h5 class="card-title">Everyone&apos;s Aroma</h5>
+          <p class="card-text">あなたの癒しの時間をシェアしましょう</p>
+        </div>
+        <% end %>
+        <% end %>
+      </div>
+
+      <div class="card card-container bg-dark">
+        <% if user_signed_in? %>
+        <%= link_to tips_path, class:"text-decoration-none" do %>
+        <%= image_tag "tips-icon" ,class:"card-img-top" %>
+        <div class="card-body text-white">
+          <h5 class="card-title">Tips</h5>
+          <p class="card-text">生活に役立つアロマの豆知識を発信します</p>
+        </div>
+        <% end %>
+        <% else %>
+        <%= link_to new_user_session_path, class:"text-decoration-none" do %>
+        <%= image_tag "tips-icon" ,class:"card-img-top" %>
+        <div class="card-body text-white">
+          <h5 class="card-title">Tips</h5>
+          <p class="card-text">生活に役立つアロマの豆知識を発信します</p>
+        </div>
+        <% end %>
+        <% end %>
+      </div>
     </div>
-
-    <div class="contents-entry">
-      <p>Main Contents</p>
-    </div>
-
-    <div class="deck-entry">
-      <div id="deck" class="card-deck">
-        <div class="card card-container bg-dark">
-          <% if user_signed_in? %>
-            <%= link_to diagnoses_path, class:"text-decoration-none" do %>
-              <%= image_tag "finder-icon" ,class:"card-img-top" %>
-                <div class="card-body text-white">
-                  <h5 class="card-title">Aroma Finder</h5>
-                  <p class="card-text">質問に答えてあなたにピッタリのアロマを見つけましょう</p>
-                </div>
-            <% end %>
-          <% else %>
-            <%= link_to new_user_session_path, class:"text-decoration-none" do %>
-              <%= image_tag "finder-icon" ,class:"card-img-top" %>
-                <div class="card-body text-white">
-                  <h5 class="card-title">Aroma Finder</h5>
-                  <p class="card-text">質問に答えてあなたにピッタリのアロマを見つけましょう</p>
-                </div>
-            <% end %>
-          <% end %>
-        </div>
-
-        <div class="card card-container bg-dark">
-          <% if user_signed_in? %>
-            <%= link_to posts_path, class:"text-decoration-none" do %>
-              <%= image_tag "sns-icon" ,class:"card-img-top" %>
-                <div class="card-body text-white">
-                  <h5 class="card-title">Everyone&apos;s Aroma</h5>
-                  <p class="card-text">あなたの癒しの時間をシェアしましょう</p>
-                </div>
-            <% end %>
-          <% else %>
-            <%= link_to new_user_session_path, class:"text-decoration-none" do %>
-              <%= image_tag "sns-icon" ,class:"card-img-top" %>
-                <div class="card-body text-white">
-                  <h5 class="card-title">Everyone&apos;s Aroma</h5>
-                  <p class="card-text">あなたの癒しの時間をシェアしましょう</p>
-                </div>
-            <% end %>
-          <% end %>
-        </div>
-
-        <div class="card card-container bg-dark">
-          <% if user_signed_in? %>
-            <%= link_to tips_path, class:"text-decoration-none" do %>
-              <%= image_tag "tips-icon" ,class:"card-img-top" %>
-                <div class="card-body text-white">
-                  <h5 class="card-title">Tips</h5>
-                  <p class="card-text">生活に役立つアロマの豆知識を発信します</p>
-                </div>
-            <% end %>
-          <% else %>
-            <%= link_to new_user_session_path, class:"text-decoration-none" do %>
-              <%= image_tag "tips-icon" ,class:"card-img-top" %>
-                  <div class="card-body text-white">
-                    <h5 class="card-title">Tips</h5>
-                    <p class="card-text">生活に役立つアロマの豆知識を発信します</p>
-                  </div>
-            <% end %>
-          <% end %>
-        </div>
-  </div>
