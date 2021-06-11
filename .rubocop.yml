@@ -40,3 +40,14 @@ Style/WordArray:
 
 Style/SymbolArray:
   Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/AbcSize:
+  Max: 40
+
+MethodLength:
+  CountComments: false 
+  Max: 20
