@@ -4,8 +4,7 @@ $(document).on('turbolinks:load', function () {
     var qNum = $("ul li").length;
     if ($("ul li input:checked").length < qNum) {
       alert("未回答の項目があります");
-    }
-    else {
+    } else {
       var typeANum = $(".typeA:checked").length,
         typeBNum = $(".typeB:checked").length,
         typeCNum = $(".typeC:checked").length,
@@ -16,8 +15,8 @@ $(document).on('turbolinks:load', function () {
         typeHNum = $(".typeH:checked").length,
         typeINum = $(".typeI:checked").length,
         typeJNum = $(".typeJ:checked").length;
-      const max = Math.max(typeANum, typeBNum, typeCNum, typeDNum, typeENum, typeFNum, typeGNum, typeHNum, typeINum, typeJNum); 
-      
+      const max = Math.max(typeANum, typeBNum, typeCNum, typeDNum, typeENum, typeFNum, typeGNum, typeHNum, typeINum, typeJNum);
+
       if (typeANum >= max) {
         $(".ResultA").fadeIn(1500);
         $("#wrapper").fadeOut();
