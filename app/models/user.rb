@@ -14,7 +14,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   def liked_by?(post_id)
-    likes.where(post_id: post_id).exists?
+    likes.exists?(post_id: post_id)
   end
 
   def self.guest

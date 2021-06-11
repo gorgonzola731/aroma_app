@@ -1,5 +1,5 @@
-ADMIN_EMAIL = "admin@example.com"
-ADMIN_PASSWORD = "password"
+ADMIN_EMAIL = "admin@example.com".freeze
+ADMIN_PASSWORD = "password".freeze
 
 AdminUser.find_or_create_by!(email: ADMIN_EMAIL) do |admin_user|
   admin_user.password = ADMIN_PASSWORD

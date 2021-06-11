@@ -45,21 +45,22 @@ module ApplicationHelper
   end
 
   def translation_class_name(aroma)
-    if aroma == "フローラル"
+    case aroma
+    when "フローラル"
       aroma.gsub(aroma, "floral")
-    elsif aroma == "ハーバル"
+    when "ハーバル"
       aroma.gsub(aroma, "herbal")
-    elsif aroma == "ウッディ"
+    when "ウッディ"
       aroma.gsub(aroma, "woody")
-    elsif aroma == "シトラス"
+    when "シトラス"
       aroma.gsub(aroma, "citrus")
-    elsif aroma == "スパイシー"
+    when "スパイシー"
       aroma.gsub(aroma, "spicy")
-    elsif aroma == "和の香り"
+    when "和の香り"
       aroma.gsub(aroma, "japanese")
-    elsif aroma == "エキゾチック"
+    when "エキゾチック"
       aroma.gsub(aroma, "exotic")
-    elsif aroma == "その他"
+    when "その他"
       aroma.gsub(aroma, "other")
     end
   end
