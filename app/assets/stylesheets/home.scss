@@ -1,62 +1,91 @@
 .box {
-  position   : relative;
-  height     : 600px;
+  position: relative;
+  height: 600px;
   width: 100%;
-  margin     : auto;
-  overflow   : hidden;
+  margin: auto;
+  overflow: hidden;
 }
 
 .box .bgImg {
-  position   : absolute;
-  top        : 0;
-  left       : 0;
-  bottom     : 0;
-  right      : 0;
-  opacity    : 0;
-  animation  : bgAnime 20s infinite;   
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  animation: bgAnime 20s infinite;
   background-size: cover;
 }
 
 .box .src1 {
-  background-image : image-url('home-bg1.jpg');  
+  background-image: image-url('home-bg1.jpg');
 }
+
 .box .src2 {
-  background-image : image-url('home-bg2.jpg');   
-  animation-delay  : 5s;
+  background-image: image-url('home-bg2.jpg');
+  animation-delay: 5s;
 }
+
 .box .src3 {
-  background-image : image-url('home-bg3.jpg');   
-  animation-delay  : 10s;
+  background-image: image-url('home-bg3.jpg');
+  animation-delay: 10s;
 }
+
 .box .src4 {
-  background-image : image-url('rosemary.jpg');   
-  animation-delay  : 15s;
+  background-image: image-url('rosemary.jpg');
+  animation-delay: 15s;
 }
 
 @keyframes bgAnime {
-   0% { opacity: 0; transform: scale(1.4, 1.4); }
-   1% { opacity: 1; transform: scale(1.4, 1.4); }
-   5% { opacity: 1; transform: scale(1.4, 1.4); }
-  21% { opacity: 1; transform: scale(1.0, 1.0); }
-  25% { opacity: 1; transform: scale(1.0, 1.0); }
-  26% { opacity: 0; }
- 100% { opacity: 0; }
+  0% {
+    opacity: 0;
+    transform: scale(1.4, 1.4);
+  }
+
+  1% {
+    opacity: 1;
+    transform: scale(1.4, 1.4);
+  }
+
+  5% {
+    opacity: 1;
+    transform: scale(1.4, 1.4);
+  }
+
+  21% {
+    opacity: 1;
+    transform: scale(1.0, 1.0);
+  }
+
+  25% {
+    opacity: 1;
+    transform: scale(1.0, 1.0);
+  }
+
+  26% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
-.boxString{
-  position   : absolute;
+.boxString {
+  position: absolute;
   width: 70%;
   height: 40%;
-  padding    : 20px;
-  background : rgba(247,255,158,0.6);          
-  top        : 60%;                              
-  left       : 50%;
-  transform  : translate(-50%,-50%);
+  padding: 20px;
+  background: rgba(247, 255, 158, 0.6);
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-   p {
-     font-weight: bold;
-     font-size: 20px;
-   }
+
+  p {
+    font-weight: bold;
+    font-size: 20px;
+  }
 }
 
 
@@ -72,6 +101,7 @@ a span {
   border-radius: 100%;
   box-sizing: border-box;
 }
+
 a span::after {
   position: absolute;
   top: 50%;
@@ -93,7 +123,7 @@ a span::after {
 
 
 .card-container {
-  padding : 0;
+  padding: 0;
   margin: 0 80px 40px;
   text-align: center;
   font-weight: bold;
@@ -101,15 +131,14 @@ a span::after {
   border: #000000 solid 2px;
   border-radius: 5px;
   box-sizing: border-box;
-  box-shadow: 0 0 6px 0 
-    rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
   transition: 0.2s;
 }
 
 .card-container:hover {
-box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.5);
-transform: translateY(-5px);
-cursor: pointer;
+  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+  cursor: pointer;
 }
 
 .card-title {
@@ -135,7 +164,8 @@ cursor: pointer;
 .btn-home {
   font-size: 30px;
   width: 40%;
-  font-family: 'Londrina Shadow', cursive;;
+  font-family: 'Londrina Shadow', cursive;
+  ;
   letter-spacing: 0.1rem;
   color: #000;
   border: 3px solid #fff;
@@ -162,6 +192,7 @@ cursor: pointer;
 
 .site-title {
   text-align: center;
+
   h1 {
     font-family: 'Londrina Shadow', cursive;
     margin: 20px auto;
@@ -169,23 +200,25 @@ cursor: pointer;
     position: relative;
     display: inline-block;
     padding: 0 55px;
-  }  
+  }
 
 }
 
-h1:before, h1:after {
+h1:before,
+h1:after {
   content: '';
   position: absolute;
   top: 50%;
   display: inline-block;
   width: 45px;
   height: 2px;
-  border:solid 1px black;
+  border: solid 1px black;
 }
 
 h1:before {
-  left:0;
+  left: 0;
 }
+
 h1:after {
   right: 0;
 }
@@ -199,25 +232,29 @@ h1:after {
   .bgImg {
     height: 100%;
   }
+
   .box {
     height: 350px;
+
     div[class*="src"] {
-      max-width: 100%; 
+      max-width: 100%;
     }
   }
 
-  .boxString{
-  width: 93%;
-  height: 60%;
-  padding    : 20px 5px;
+  .boxString {
+    width: 93%;
+    height: 60%;
+    padding: 20px 5px;
+
     p {
       font-size: 15px;
-      }
+    }
   }
 
   .link-group {
     margin-top: 20px;
     width: 90%;
+
     .btn-home {
       font-size: 18px;
     }

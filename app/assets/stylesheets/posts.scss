@@ -1,6 +1,7 @@
 .base-container {
   margin-top: 0;
 }
+
 .full_image {
   width: 70%;
   max-height: 600px;
@@ -22,17 +23,17 @@
 
 .vertical_like {
   position: relative;
-    border-radius: 8px;
-    background: #FFFAF0;
-    display: block;
-    box-sizing: border-box;
-    color: #111;
-    text-align: center;
-    text-decoration: none;
-    width: 200px;
-    margin: auto;
-    padding: 10px 20px;
-    cursor: pointer;
+  border-radius: 8px;
+  background: #FFFAF0;
+  display: block;
+  box-sizing: border-box;
+  color: #111;
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+  margin: auto;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
 .card-body {
@@ -47,7 +48,7 @@
   height: 130px;
 }
 
-.post_img_full{
+.post_img_full {
   text-align: center;
 }
 
@@ -66,7 +67,7 @@
 }
 
 .icon_space {
-  padding:10px 0 0 10px;
+  padding: 10px 0 0 10px;
   margin-right: 15px;
 }
 
@@ -86,6 +87,7 @@
   padding-top: 80px;
   text-align: center;
 }
+
 .post-content p {
   font-weight: bold;
   font-size: 25px;
@@ -96,7 +98,7 @@
 
 .fixed_btn {
   position: fixed;
-  bottom: 80px; 
+  bottom: 80px;
   right: 6%;
   padding: 6px 30px;
   font-family: "Roboto", sans-serif;
@@ -109,7 +111,7 @@
   color: #fff;
   background: #93c9ff;
   border: 1.5px solid #93c9ff;
-  border-radius:33px;
+  border-radius: 33px;
   text-decoration: none;
 }
 
@@ -185,16 +187,17 @@ aside {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  .card-text {
-  margin: 0;
-  font-size: 30px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  }
-}  
 
-a:hover{
+  .card-text {
+    margin: 0;
+    font-size: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+a:hover {
   text-decoration: none;
 }
 
@@ -211,29 +214,34 @@ a:hover{
 .user_info {
   text-align: center;
   color: #000;
-.user_name {
-  margin-top: 30px;
-  font-weight: bold;
-  font-size: 25px;
-}
 
-.user_name {
-  p {
-    color: #000;
+  .user_name {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 25px;
   }
-}
+
+  .user_name {
+    p {
+      color: #000;
+    }
+  }
 
 }
+
 .post_info {
   margin-top: 40px;
   display: flex;
+
   .post_entry {
     width: 80%;
+
     p {
       font-size: 18px;
     }
   }
 }
+
 .user_info {
   width: 20%;
 }
@@ -242,12 +250,14 @@ a:hover{
   font-size: 35px;
   overflow-wrap: break-word;
 }
+
 .post-article {
   text-align: center;
+
   p {
     font-size: 25px;
     padding: 10px 200px;
-    overflow-wrap:  break-word;
+    overflow-wrap: break-word;
   }
 }
 
@@ -264,12 +274,13 @@ a:hover{
 }
 
 .comment_destroy {
-    margin: auto 0 0 auto;
-    padding-right: 20px;
-    a {
-      color: #4453637c;
-    }
+  margin: auto 0 0 auto;
+  padding-right: 20px;
+
+  a {
+    color: #4453637c;
   }
+}
 
 .comment-date {
   margin-left: auto;
@@ -279,6 +290,7 @@ a:hover{
 
 .comment-container {
   display: flex;
+
   .comment-content {
     width: 80%;
   }
@@ -287,11 +299,12 @@ a:hover{
 .comment-user {
   text-align: center;
   padding-top: 10px;
+
   .comment-icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
-  object-fit: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    object-fit: cover;
   }
 }
 
@@ -306,7 +319,8 @@ a:hover{
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 100%;
-  margin: 0 auto;}
+  margin: 0 auto;
+}
 
 .tab_item {
   width: calc(100%/2);
@@ -323,6 +337,7 @@ a:hover{
   font-weight: bold;
   transition: all 0.2s ease;
 }
+
 .tab_item:hover {
   opacity: 0.75;
 }
@@ -338,12 +353,12 @@ input[name="tab_item"] {
   overflow: hidden;
 }
 
-#all:checked ~ #all_content,
-#like:checked ~ #like_content {
+#all:checked~#all_content,
+#like:checked~#like_content {
   display: block;
 }
 
-.tabs input:checked + .tab_item {
+.tabs input:checked+.tab_item {
   background-color: #5ab4bd;
   color: #fff;
 }
@@ -354,33 +369,41 @@ input[name="tab_item"] {
 
 
 // 色分けのヘルパーメソッド用
-.floral{
+.floral {
   background-color: #FFCCFF;
 }
+
 .citrus {
   background-color: #FFFF99;
 }
-.herbal{
+
+.herbal {
   background-color: #AEFFBD;
 }
-.woody{
+
+.woody {
   background-color: #FFAD90;
 }
-.spicy{
+
+.spicy {
   background-color: #DB7093;
 }
-.japanese{
+
+.japanese {
   background-color: #66CDAA;
 }
-.exotic{
+
+.exotic {
   background-color: #D0B0FF;
 }
-.other{
+
+.other {
   background-color: #DCDCDC;
 }
 
 // スマホ対応
 @media screen and (max-width:950px) {
+
   // 投稿一覧
   .container {
     padding: 0;
@@ -413,70 +436,76 @@ input[name="tab_item"] {
 
   .text_space {
     .card-text {
-    margin: 0;
-    white-space: normal;
-    font-size: 15px;
+      margin: 0;
+      white-space: normal;
+      font-size: 15px;
     }
-  }  
+  }
 
-    .text_content {
-      display: none;
-    }
-    .icons {
-      margin-left: auto;
-      padding-right: 15px;
-      font-size: small;
-    }
-    .icon_image {
-      width: 40px;
-      height: 40px;
-    }
-    .form-content {
-      min-height: 200px;
-    }
+  .text_content {
+    display: none;
+  }
 
-    #all_content {
-      padding: 0;
-    }
+  .icons {
+    margin-left: auto;
+    padding-right: 15px;
+    font-size: small;
+  }
+
+  .icon_image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .form-content {
+    min-height: 200px;
+  }
+
+  #all_content {
+    padding: 0;
+  }
+
+  .user_info {
+    width: 100%;
+  }
+
+  // 投稿詳細
+  .post_entry .page-title {
+    padding-top: 40px;
+  }
+
+  .post-content p {
+    display: none;
+  }
+
+  .post_info {
+    flex-direction: column;
 
     .user_info {
       width: 100%;
     }
 
-    // 投稿詳細
-    .post_entry .page-title {
-      padding-top: 40px;
-    }
-
-    .post-content p {
-      display: none;
-    }
-
-    .post_info {
-      flex-direction: column;
-      .user_info {
-        width: 100%;
-      }
-      .post_entry {
-        width: 100%;
-        text-align: center;
-      }
-    }
-
-    .post-article {
+    .post_entry {
+      width: 100%;
       text-align: center;
-      p {
-        font-size: 25px;
-        padding: 0;
-        overflow-wrap: normal;
-      }
-    } 
-
-    .comment_destroy {
-      padding-right: 0;
     }
+  }
+
+  .post-article {
+    text-align: center;
+
+    p {
+      font-size: 25px;
+      padding: 0;
+      overflow-wrap: normal;
+    }
+  }
+
+  .comment_destroy {
+    padding-right: 0;
+  }
 
 
-    
-    
+
+
 }

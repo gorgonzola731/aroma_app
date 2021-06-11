@@ -3,15 +3,15 @@
     <div class="user-panel text-center">
       <span class="icon_image">
         <% if current_user.image? %>
-          <img src=<%= current_user.image %> class = "icon_image_side">
-          <% else %>
-          <%= image_tag 'profile_default2.jpg' ,class: "icon_image_side" %>
+        <img src=<%= current_user.image %> class="icon_image_side">
+        <% else %>
+        <%= image_tag 'profile_default2.jpg' ,class: "icon_image_side" %>
         <% end %>
       </span>
-        <h4 class='my-2'><%= current_user.name %></h4>
+      <h4 class='my-2'><%= current_user.name %></h4>
     </div>
   </div>
-  
+
   <div class="panel-body text-center">
     <div data-toggle="tooltip">
       <a class="show-btn-link" href="/users/show/<%= current_user.id %>">

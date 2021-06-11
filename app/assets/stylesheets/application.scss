@@ -1,5 +1,3 @@
-
-
 /* 全体 */
 html {
   height: 100%;
@@ -39,29 +37,29 @@ footer {
 }
 
 
-.mw-md{
+.mw-md {
   max-width: 720px;
 }
 
-.mw-lg{
+.mw-lg {
   max-width: 960px;
 }
 
-.mw-xl{
+.mw-xl {
   max-width: 1200px;
-} 
+}
 
 
 /* ページネーション部分 */
 .pagination {
   justify-content: center;
   margin-top: 80px;
-} 
+}
 
 /* いいね機能 */
 .vertical_like {
-  text-align: center ;
-  margin:100px 100px 0 35px;
+  text-align: center;
+  margin: 100px 100px 0 35px;
   width: 100px;
   display: flex;
 }
@@ -87,7 +85,7 @@ footer {
 
 .alert-alert {
   @extend .alert-danger;
-}  
+}
 
 
 /*
