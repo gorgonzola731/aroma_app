@@ -43,7 +43,6 @@
   <div class="deck-entry">
     <div id="deck" class="card-deck">
       <div class="card card-container bg-dark">
-        <% if user_signed_in? %>
         <%= link_to diagnoses_path, class:"text-decoration-none" do %>
         <%= image_tag "finder-icon" ,class:"card-img-top" %>
         <div class="card-body text-white">
@@ -51,19 +50,9 @@
           <p class="card-text">質問に答えてあなたにピッタリのアロマを見つけましょう</p>
         </div>
         <% end %>
-        <% else %>
-        <%= link_to new_user_session_path, class:"text-decoration-none" do %>
-        <%= image_tag "finder-icon" ,class:"card-img-top" %>
-        <div class="card-body text-white">
-          <h5 class="card-title">Aroma Finder</h5>
-          <p class="card-text">質問に答えてあなたにピッタリのアロマを見つけましょう</p>
-        </div>
-        <% end %>
-        <% end %>
       </div>
 
       <div class="card card-container bg-dark">
-        <% if user_signed_in? %>
         <%= link_to posts_path, class:"text-decoration-none" do %>
         <%= image_tag "sns-icon" ,class:"card-img-top" %>
         <div class="card-body text-white">
@@ -71,19 +60,9 @@
           <p class="card-text">あなたの癒しの時間をシェアしましょう</p>
         </div>
         <% end %>
-        <% else %>
-        <%= link_to new_user_session_path, class:"text-decoration-none" do %>
-        <%= image_tag "sns-icon" ,class:"card-img-top" %>
-        <div class="card-body text-white">
-          <h5 class="card-title">Everyone&apos;s Aroma</h5>
-          <p class="card-text">あなたの癒しの時間をシェアしましょう</p>
-        </div>
-        <% end %>
-        <% end %>
       </div>
 
       <div class="card card-container bg-dark">
-        <% if user_signed_in? %>
         <%= link_to tips_path, class:"text-decoration-none" do %>
         <%= image_tag "tips-icon" ,class:"card-img-top" %>
         <div class="card-body text-white">
@@ -91,14 +70,6 @@
           <p class="card-text">生活に役立つアロマの豆知識を発信します</p>
         </div>
         <% end %>
-        <% else %>
-        <%= link_to new_user_session_path, class:"text-decoration-none" do %>
-        <%= image_tag "tips-icon" ,class:"card-img-top" %>
-        <div class="card-body text-white">
-          <h5 class="card-title">Tips</h5>
-          <p class="card-text">生活に役立つアロマの豆知識を発信します</p>
-        </div>
-        <% end %>
-        <% end %>
+
       </div>
     </div>
