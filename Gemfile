@@ -26,6 +26,7 @@ gem "carrierwave", "~> 2.0"
 gem "coderay"
 gem "kaminari"
 gem "mini_magick"
+gem "rails_best_practices"
 gem "redcarpet"
 gem "remotipart"
 # Use Active Storage variant

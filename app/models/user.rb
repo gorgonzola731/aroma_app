@@ -13,10 +13,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  def liked_by?(post_id)
-    likes.exists?(post_id: post_id)
-  end
-
   def self.guest
     find_or_create_by!(name: " guest_user", email: "guest@example.com") do |user|
       user.password = SecureRandom.urlsafe_base64
