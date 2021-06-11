@@ -28,6 +28,7 @@ gem "kaminari"
 gem "mini_magick"
 gem "redcarpet"
 gem "remotipart"
+gem 'rails_best_practices'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem "devise"

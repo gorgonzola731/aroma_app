@@ -8,10 +8,4 @@ class TipsController < ApplicationController
   def show
     @tip = Tip.find(params[:id])
   end
-
-  private
-
-  def tip_params
-    params.require(:tip).permit(:title, :article, :image)
-  end
 end
