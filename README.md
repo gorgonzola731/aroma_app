@@ -5,7 +5,7 @@
 **アロマをテーマにしたポータルサイトです。診断機能、投稿機能、コラムの３つのコンテンツがあります**
 
 <div align="center">
-   <img src="https://user-images.githubusercontent.com/76684941/121766835-a2619c80-cb8f-11eb-85ed-14fced407b0c.gif" width="400">
+   <img src="https://user-images.githubusercontent.com/76684941/121766835-a2619c80-cb8f-11eb-85ed-14fced407b0c.gif" width="500">
 </div>
 
 ## アプリURL
