@@ -1,5 +1,7 @@
 # README
 
+![smartmockups_kpsnj87e](https://user-images.githubusercontent.com/76684941/121732405-31899880-cb2d-11eb-96d0-d5e647ed54b5.gif)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
