@@ -2,6 +2,7 @@
 # README
 
 # :droplet:Aroma life
+**アロマをテーマにしたポータルサイトです。診断機能、投稿機能、コラムの３つのコンテンツがあります**
 
 <div align="center">
    <img src="https://user-images.githubusercontent.com/76684941/121766835-a2619c80-cb8f-11eb-85ed-14fced407b0c.gif" width="600">
@@ -9,7 +10,7 @@
 
 ## アプリURL
 
-https://aromalife-app.com
+https://aromalife-app.com<br>
 （ゲストログイン(閲覧用)ボタンにてログインをお願い致します。）
 
 
@@ -39,7 +40,7 @@ https://aromalife-app.com
     * factory_bot (6.2.0)
 
 
-## コンセプトは「ストレスを感じる日常にアロマの癒しを」です
+## コンセプト 「ストレスを感じる日常にアロマの癒しを」
 
 ###  自分の今の状況にあった香りを楽しめる
 すでにリリースされているアプリの中にはアロマの特性を解説したものがありましたが、ユーザーの身体の状態や好みから適切なアロマを選ぶというサービスはなかったため、簡単な質問に答えるとその人の今の状態に適したアロマをおすすめするという診断機能を実装しました。
@@ -83,8 +84,11 @@ https://aromalife-app.com
 
 
 ## ER図
-製作中
+<div align="center">
+   <img src="https://user-images.githubusercontent.com/76684941/121771351-d5b12500-cba9-11eb-8402-89b2cd689607.png" width="900">
+</div>
 
-## 追加予定機能
+
+## 追加を予定している機能
 - 投稿を検索する機能
 - CI/CDパイプラインの構築
