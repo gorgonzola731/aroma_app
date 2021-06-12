@@ -1,19 +1,19 @@
 
 # README
-
+<br>
 # Aroma life
-**アロマをテーマにしたポータルサイトです。診断機能、投稿機能、コラムの３つのコンテンツがあります**
+**アロマをテーマにしたポータルサイトです。診断機能、投稿機能、コラムの３つのコンテンツを制作しました。**
 
 <div align="center">
    <img src="https://user-images.githubusercontent.com/76684941/121766835-a2619c80-cb8f-11eb-85ed-14fced407b0c.gif" width="500">
 </div>
-
+<br>
 ## アプリURL
 
 https://aromalife-app.com<br>
 （ゲストログイン(閲覧用)ボタンにてログインをお願い致します。）
 
-
+<br>
 ## 使用技術
 
 * フロントサイド
@@ -39,7 +39,7 @@ https://aromalife-app.com<br>
     * Rspec (3.1.0)
     * factory_bot (6.2.0)
 
-
+<br>
 ## コンセプト 「ストレスを感じる日常にアロマの癒しを」
 
 ###  自分の今の状況にあった香りを楽しめる
@@ -63,10 +63,11 @@ https://aromalife-app.com<br>
    <img src="https://user-images.githubusercontent.com/76684941/121768850-6b918380-cb9b-11eb-88bc-193b00e30fef.png" width="600">
 </div>
 
+<br>
 ## 制作背景
 私の母がHSP(Highly Sensitive Person)と呼ばれる周囲と比べ疲れやすい性質であったため、過去にアロマをプレゼントしたことがありました。その後、使用した母が心身ともにリラックスすることができたと喜んでいたため、アロマの効果を実感いたました。<br>しかし、店頭に行くと非常に種類が多く身体の状況や好みに合ったものを選ぶのが難しいことを知りました。そこで、個人個人に合ったアロマを使用する手助けができたり、効果的な使い方を伝えることができるツールがあればHSPの方々が今よりもっと充実したリラックスタイムを送ることができるのではないかと考え、本アプリの制作を決めました。<br>制作にあたり、日常的にアロマを利用している人やHSPの方にSNSを通じて好みの香りの系統などを聞き、診断機能や掲示板機能に自分なりに反映させました。
 
-
+<br>
 ## 機能一覧
 |  実装内容  |　追加説明  |
 | ---- | ---- |
@@ -77,18 +78,18 @@ https://aromalife-app.com<br>
 | 画像投稿機能 | carrierwaveで実装 |
 | いいね機能 | ajaxで実装 |
 |  診断機能  | jqueryで実装 |
-| 掲示板 | markdownで記述 |
+| コラム | markdownで記述 |
 |  ページネーション機能 |  kaminariで実装  |
 |  管理者画面  |  activeadminで実装  |
 
-
+<br>
 
 ## ER図
 <div align="center">
    <img src="https://user-images.githubusercontent.com/76684941/121771351-d5b12500-cba9-11eb-8402-89b2cd689607.png" width="900">
 </div>
 
-
+<br>
 ## 追加を予定している機能
 - 投稿を検索する機能
 - CI/CDパイプラインの構築
