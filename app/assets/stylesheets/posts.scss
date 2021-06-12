@@ -43,7 +43,7 @@
 }
 
 
-.noimage {
+.thumb-image, .noimage {
   width: 200px;
   height: 130px;
 }
@@ -190,10 +190,16 @@ aside {
 
   .card-text {
     margin: 0;
-    font-size: 30px;
+    font-size: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+}
+
+.text_space {
+  .text_content {
+    font-size: 17px;
   }
 }
 
@@ -437,8 +443,10 @@ input[name="tab_item"] {
   .text_space {
     .card-text {
       margin: 0;
-      white-space: normal;
       font-size: 15px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 
