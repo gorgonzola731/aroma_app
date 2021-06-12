@@ -4,7 +4,7 @@
 # Aroma life
 
 <div style="width:50%">
-   <img src="smartmockups_kpsnj87e.gif">
+   <img src="">
 </div>
 
 ## アプリURL
