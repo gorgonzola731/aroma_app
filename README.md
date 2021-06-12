@@ -7,7 +7,7 @@
 **アロマをテーマにしたポータルサイトです。診断機能、投稿機能、コラムの３つのコンテンツを制作しました。**
 
 <div align="center">
-   <img src="https://user-images.githubusercontent.com/76684941/121766835-a2619c80-cb8f-11eb-85ed-14fced407b0c.gif" width="500">
+   <img src="https://user-images.githubusercontent.com/76684941/121778274-34d66000-cbd1-11eb-8f54-006eaa7c52cd.gif" width="500">
 </div>
 
 <br>
