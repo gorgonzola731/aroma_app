@@ -3,7 +3,7 @@
 
 # Aroma life
 
-<div style="text-align: center;">
+<div style="text-align: center">
    <img src="https://user-images.githubusercontent.com/76684941/121766835-a2619c80-cb8f-11eb-85ed-14fced407b0c.gif" width="600">
 </div>
 
