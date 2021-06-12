@@ -28,7 +28,7 @@
 </div>
 
 <div class="post-article">
-    <p><%= @post.content %></p>
+    <p><%= text_url_to_link(@post.content).html_safe %></p>
 </div>
 
 <div class="post_img_full mt-5">
