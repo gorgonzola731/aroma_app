@@ -3,9 +3,10 @@
 
 # Aroma life
 
-<div style="text-align: center;">
-![drawing](https://user-images.githubusercontent.com/76684941/121732405-31899880-cb2d-11eb-96d0-d5e647ed54b5.gif){ width=50% }
+<div style="width:50%">
+   <img src="smartmockups_kpsnj87e.gif">
 </div>
+
 ## アプリURL
 
 https://aromalife-app.com
