@@ -4,7 +4,7 @@
 # Aroma life
 
 <div style="width:50%">
-   <img src="">
+   <img src="https://user-images.githubusercontent.com/76684941/121766835-a2619c80-cb8f-11eb-85ed-14fced407b0c.gif">
 </div>
 
 ## アプリURL
