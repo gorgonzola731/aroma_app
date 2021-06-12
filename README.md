@@ -4,9 +4,8 @@
 # Aroma life
 
 <div style="text-align: center;">
-<img src="https://user-images.githubusercontent.com/76684941/121766519-501f7c00-cb8d-11eb-8d78-54220b03036a.png" width=“100”>
+![drawing](https://user-images.githubusercontent.com/76684941/121732405-31899880-cb2d-11eb-96d0-d5e647ed54b5.gif){ width=50% }
 </div>
-https://user-images.githubusercontent.com/76684941/121732405-31899880-cb2d-11eb-96d0-d5e647ed54b5.gif
 ## アプリURL
 
 https://aromalife-app.com
