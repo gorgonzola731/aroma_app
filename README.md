@@ -1,7 +1,7 @@
 
 # README
 <br>
-# Aroma life
+# Aroma life 
 **アロマをテーマにしたポータルサイトです。診断機能、投稿機能、コラムの３つのコンテンツを制作しました。**
 
 <div align="center">
