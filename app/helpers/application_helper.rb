@@ -1,6 +1,7 @@
 module ApplicationHelper
   require "redcarpet"
   require "coderay"
+  require "uri"
 
   def markdown(text)
     html_render = HTMLwithCoderay.new(
@@ -20,7 +21,17 @@ module ApplicationHelper
       strikethrough: true
     }
     markdown = Redcarpet::Markdown.new(html_render, options)
-    markdown.render(text).html_safe
+    markdown.render(text)
+  end
+
+  def text_url_to_link(text)
+    URI.extract(text, ["http", "https"]).uniq.each do |url|
+      sub_text = ""
+      sub_text << "<a href=" << url << " target=\"_blank\">" << url << "</a>"
+      text.gsub!(url, sub_text)
+    end
+
+    text
   end
 
   def translation_class_name(aroma)

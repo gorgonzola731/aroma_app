@@ -6,7 +6,7 @@
 </div>
 <div class="tip-container">
   <h1 class="text-center">〜<%= @tip.title %>〜</h1>
-  <p><%= markdown(@tip.article) %></p>
+  <p><%= markdown(@tip.article).html_safe %></p>
 </div>
 
 <hr class="my-3">
