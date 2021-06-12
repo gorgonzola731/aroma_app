@@ -14,7 +14,7 @@
 
 ## アプリURL
 
-https://aromalife-app.com<br>
+🌐 https://aromalife-app.com<br>
 （ゲストログイン(閲覧用)ボタンにてログインをお願い致します。）
 
 <br>
