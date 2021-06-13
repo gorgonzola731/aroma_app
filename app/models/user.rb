@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
-  validates :name, presence: true
+  validates :name, presence: true, length: { maximum: 15 }
   validates :email, presence: true, uniqueness: true
   validates :password, presence: true
   devise :database_authenticatable, :registerable,

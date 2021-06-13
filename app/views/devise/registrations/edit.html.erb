@@ -4,7 +4,8 @@
 <div class="forms">
   <div class="form-group">
     <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" ,class: 'form-control'%>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" ,class: 'form-control',maxlength:"15"%>
+    <small class="form-text">(15文字以内)</small>
   </div>
 
   <div class="form-group">
