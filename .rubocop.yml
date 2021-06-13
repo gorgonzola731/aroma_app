@@ -13,6 +13,7 @@ AllCops:
     - "node_modules/**/*"
     - "tmp/**/*"
     - "vendor/**/*"
+    - "config/environments/development.rb"
 
 # 日本語のコメントを許可
 Style/AsciiComments:
@@ -50,4 +51,7 @@ Metrics/AbcSize:
 
 MethodLength:
   CountComments: false 
+  Max: 20
+
+CyclomaticComplexity:
   Max: 20

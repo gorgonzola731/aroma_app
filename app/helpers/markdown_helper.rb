@@ -1,7 +1,7 @@
 module MarkdownHelper
   def markdown(text)
     markdown = Redcarpet::Markdown.new(html_renderer, markdown_extensions)
-    markdown.render(text).html_safe
+    markdown.render(text)
   end
 
   private
