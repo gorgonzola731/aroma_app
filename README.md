@@ -17,6 +17,9 @@
 https://aromalife-app.com<br>
 （ゲストログイン(閲覧用)ボタンにてログインをお願い致します。）
 
+完成までの経緯や工夫した点などをQiitaの記事にアウトプットいたしました。よろしければこちらもご確認お願いいたします。
+https://qiita.com/gorgonzola731/items/2a457a49067a10b329b9
+
 <br>
 
 ## :computer:使用技術
