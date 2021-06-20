@@ -12,7 +12,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @user = User.find_by(id: @post.user_id)
+    @user = @post.user
     @comment = Comment.new
     @comments = @post.comments.order(created_at: :desc)
   end
@@ -23,8 +23,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create!(post_params)
-    @posts = Post.all.order(created_at: :desc)
-    @posts = @posts.page(params[:page]).per(PER_PAGE)
+    @posts = Post.all.order(created_at: :desc).page(params[:page]).per(PER_PAGE)
   end
 
   def destroy
@@ -34,8 +33,7 @@ class PostsController < ApplicationController
     @posts = @posts.page(params[:page]).per(PER_PAGE)
 
     @user = User.find_by(id: @post.user_id)
-    @my_posts = @user.posts.order(created_at: :desc)
-    @my_posts = @my_posts.page(params[:page]).per(PER_PAGE)
+    @my_posts = @user.posts.order(created_at: :desc).page(params[:page]).per(PER_PAGE)
 
     @like_posts = @user.like_posts.page(params[:page]).per(PER_PAGE)
   end
