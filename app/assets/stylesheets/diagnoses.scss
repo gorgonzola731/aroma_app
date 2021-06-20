@@ -168,8 +168,10 @@ ul {
 }
 
 .textBox {
+  display: flex;
   span {
     font-weight: bold;
+    margin-right: auto;
   }
 }
 
@@ -194,11 +196,5 @@ ul {
   .result {
     margin: 20px 0;
     width: 100%;
-  }
-}
-
-@media screen and (min-width: 950px) {
-  .br-sp {
-    display: none;
   }
 }
