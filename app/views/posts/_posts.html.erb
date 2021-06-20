@@ -18,8 +18,8 @@
 
     <div class='thumbnail_space'>
       <div class="like_space">
-        <i class="far fa-comment-dots home-icon"></i> <%= post.comments.count %>
-        <i class="fas fa-heart home-icon"></i> <%= post.likes.count %>
+        <i class="far fa-comment-dots home-icon"></i> <%= post.comments.length %>
+        <i class="fas fa-heart home-icon"></i> <%= post.likes.length %>
       </div>
       <% if post.image? %>
       <%= image_tag post.image.thumb.url ,class: 'thumb-image'%>
