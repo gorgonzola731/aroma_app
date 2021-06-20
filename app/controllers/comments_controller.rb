@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
     @comment = @post.comments.build(comment_params)
     @comment.user_id = current_user.id
     @comment.save
-    @comments = @post.comments.order(created_at: :desc)
+    @comments = @post.comments.includes(:user).order(created_at: :desc)
     render :index
   end
 
@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
     @comment.destroy
-    @comments = @post.comments.order(created_at: :desc)
+    @comments = @post.comments.includes(:user).order(created_at: :desc)
     render :index
   end
 
