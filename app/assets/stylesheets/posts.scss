@@ -82,19 +82,21 @@
 .post-content .page-title {
   font-family: 'Londrina Shadow', cursive;
   font-size: 50px;
-  color: #000;
+  color: #fff;
   letter-spacing: 0.1em;
   font-weight: bold;
   padding-top: 80px;
   text-align: center;
+  text-shadow: 1px 2px 3px #009966; 
 }
 
 .post-content p {
   font-weight: bold;
   font-size: 25px;
-  color: #000;
+  color: #fff;
   margin: 10px 0 0;
   text-align: center;
+  text-shadow: 1px 2px 3px #009966; 
 }
 
 .fixed_btn {
@@ -421,7 +423,7 @@ input[name="tab_item"] {
   }
 
   .main-contents {
-    flex-direction: column-reverse;
+    flex-direction: column;
     width: 100%;
   }
 

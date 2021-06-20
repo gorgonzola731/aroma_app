@@ -7,9 +7,9 @@
 
 <div id="wrapper">
   <%= image_tag 'finder-bg' ,class: 'finder-bg' %>
-  <ul class="questions text-center">
-    <h1 class="title">Questions</h1>
-    <p>(今のご気分でお答えください)</p>
+  <ul class="questions">
+    <h1 class="title text-center">Questions</h1>
+    <p class="text-center">(今のご気分でお答えください)</p>
 
     <li class="textBox">
       <span class="text">Q1. 気分が落ち込んでいる</span>
@@ -52,7 +52,7 @@
     </li>
 
     <li class="textBox">
-      <span class="text">Q6.お肌のトラブルに悩んでいる</span><br class="br-sp">
+      <span class="text">Q6.お肌のトラブルがある</span>
       <label class="yes"><input class="typeC typeG" name="q06" type="radio">YES
       </label>
       <label class="no"><input class="typeA typeB" name="q06" type="radio">NO
@@ -100,7 +100,7 @@
     </li>
 
     <li class="textBox">
-      <span class="text">Q12.風邪はいつも喉からくる</span><br class="br-sp">
+      <span class="text">Q12.風邪はいつも喉からくる</span>
       <label class="yes"><input class="typeH typeI" name="q12" type="radio">YES
       </label>
       <label class="no"><input name="q12" type="radio">NO
@@ -108,7 +108,7 @@
     </li>
 
     <li class="textBox">
-      <span class="text">Q13. 家にいても仕事のことが忘れられない</span><br class="br-sp">
+      <span class="text">Q13. 仕事のことが忘れられない</span>
       <label class="yes"><input class="typeF typeJ" name="q13" type="radio">YES
       </label>
       <label class="no"><input class="typeA typeC" name="q13" type="radio">NO
@@ -123,7 +123,9 @@
       </label>
     </li>
 
-    <button class="btn btn-radius-solid btn--shadow w-50 mt-2" id="finder-btn">Check!</button>
+    <div class="text-center">
+      <button class="btn btn-radius-solid btn--shadow w-50 mt-2" id="finder-btn">Check!</button>
+    </div>
   </ul>
 </div>
 
