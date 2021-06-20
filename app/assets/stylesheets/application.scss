@@ -72,10 +72,23 @@ footer {
   color: #ff2581;
 }
 
-.button-group {
+.button-group .btn {
   max-width: 800px;
   justify-content: center;
   margin: auto;
+  background: #f1e767;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f1e767), to(#feb645));
+  background: -webkit-linear-gradient(top, #f1e767 0%, #feb645 100%);
+  background: linear-gradient(to bottom, #f1e767 0%, #feb645 100%);
+  font-family: 'Londrina Shadow', cursive;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+}
+
+.button-group .btn:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f1e767), to(#feb645));
+  background: -webkit-linear-gradient(bottom, #f1e767 0%, #feb645 100%);
+  background: linear-gradient(to top, #f1e767 0%, #feb645 100%);
 }
 
 /* フラッシュの色 */
