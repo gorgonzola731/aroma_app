@@ -1,6 +1,4 @@
 class TipsController < ApplicationController
-  before_action :authenticate_user!
-
   def index
     @tips = Tip.all.order(created_at: :desc)
   end
