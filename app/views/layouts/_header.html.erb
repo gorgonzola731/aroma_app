@@ -12,11 +12,17 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <% if user_signed_in? %>
+      <%= link_to "Aroma finder", diagnoses_path ,class: "nav-item nav-link active font-weight-bold"%>
+      <%= link_to "Everyone's Aroma", posts_path ,class: "nav-item nav-link active font-weight-bold"%>
+      <%= link_to "Tips", tips_path ,class: "nav-item nav-link active font-weight-bold"%>
       <%= link_to "アカウント編集", edit_user_registration_path ,class: "nav-item nav-link active font-weight-bold"%>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" },class: "nav-item nav-link active font-weight-bold" %>
+
       <% else %>
       <%= link_to "ログイン", new_user_session_path,class: "nav-item nav-link active font-weight-bold" %>
       <%= link_to "アカウント登録", new_user_registration_path,class: "nav-item nav-link active font-weight-bold" %>
+      <%= link_to "Aroma finder", diagnoses_path ,class: "nav-item nav-link active font-weight-bold"%>
+      <%= link_to "Tips", tips_path ,class: "nav-item nav-link active font-weight-bold"%>
       <% end %>
     </div>
   </div>
