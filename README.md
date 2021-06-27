@@ -106,3 +106,4 @@ https://qiita.com/gorgonzola731/items/2a457a49067a10b329b9
 - EC系のAPIを使って購入ページへ遷移する機能
 - 投稿を検索する機能
 - CI/CDパイプラインの構築
+- Dockerの導入
